@@ -1,0 +1,182 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{442020}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Statistical/Thermal Physics}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Homework 1}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Michael Treacy}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item \textbf{1.9} What is the volume of one mole of air, at room temperature and 1 atm pressure?
+    
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \item \textbf{1.15} Estimate the average temperature of the air inside a hot-air balloon (see Figure 1.1). Assume 
+    that the total mass of the unfilled balloon and payload is $500 ~ kg$. What is the mass of the air inside the balloon?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+    
+    \item \textbf{1.17} Even at low density, real gases don't quite obey the ideal gas law. A systematic way to account for deviations 
+    from ideal behavior is the \textbf{virial expansion},
+    $$
+      PV=n ~ RT \bigg(1+\dfrac{B(T)}{(V/n)}+\dfrac{C(T)}{(V/n)^2}+...\bigg),
+    $$
+    where the functions $B(T), C(T)$, and so on are called \textbf{virial coefficients}... 
+    \begin{enumerate}
+      \item For each temperature in the table, compute the second term in the virial equation, $B(T)/(V/n),$ for nitrogen at atmospheric
+      pressure. Discuss the validity of the ideal gas law under these conditions.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Think about the forces between molecules, and explain why we might expect $B(T)$ to be negative at low temperatures but positive 
+      at high temperatures.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Any proposed relation between $P, V,$ ans $T$, like the ideal gas law or the virial equations, is called an \textbf{equation of state}.
+      Another famous equation of state, which is qualitatively accurate even for dense fluids, is the \textbf{van der Waals equation},
+      $$
+        \bigg(P+\dfrac{an^2}{V^2}\bigg) \bigg(V-nb\bigg)=nRT,
+      $$
+      where $a$ and $b$ are constants that depend on the type of gas. Calculate the second and third virial coefficients (B and C) for a gas
+      obeying the van der Waals equation, in terms of a and b. (Hint: The bionomial expansion says that 
+      $(1+x)^p \approx 1+px+\dfrac{1}{2} p(p-1) x^2$, provided that $|px|<<1$. Apply this approximation to the quantity 
+      $\left[1-(nb/V)\right]^{-1}$).
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Plot a graph of the van de Waals prediction for $B(T)$, choosing a and b so as to approximately match the data given above for nitrogen. 
+      Discuss the accuracy of the van der Waals equation over this range of conditions. (The van der Waals equation is discussed much further 
+      in Section 5.3.)
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+    
+    \item \textbf{1.18} Calculate the rms speed of a nitrogen molecule at room temperature.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+    
+    \item \textbf{1.22} If you poke a hole in a container full of gas, the gas will start leaking out. In this problem you 
+    will make a rough estimate of the rate at which gas escapes through a hole. (This process is called \textbf{effusion}, at least when 
+    the hole is sufficiently small.)
+
+      \begin{enumerate}
+        \item Consider a small portion (area=A) of the inside wall of a container full of gas. Show that the number of molecules colliding
+        with this surface in a time interval $\Delta t$ is $P ~ A ~ \Delta t/(2m \overline{v_x})$, where $P$ is the pressure, $m$ is the 
+        average molecular mass, and $\overline{v_x}$ is the average $x$ velocity of those molecules that collide with the wall.
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
+        \item It is not easy to calculate $\overline{v_x}$, but a good enough approximation is $\overline{v_x}^{1/2}$, where the bar 
+        now represents an average over all molecules in the gas. Show that $\overline{v_x}^{1/2}=\sqrt{kT/m}.$
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+          
+        \item If we now take away this small part of the wall of the container, the molecules that would have collided with it will 
+        instead escape through the hole. Assuming that nothing enters through the hole, show that the number $N$ of molecules inside
+        the container as a fucntion of time is governed by the differential equation
+        $$
+          \dfrac{dN}{dt}=-\dfrac{A}{2V} \sqrt{\dfrac{kT}{m}} N
+        $$
+        Solve this equation (assuming constant temperature) to obtain a formula of the form $N(t)=N(0) ~ e^{-t\tau}$, where $\tau$
+        is the "characteristic time" for $N$ (and $P$) to drop by a factor of $e$.
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
+        \item Calculate the characteristic time for a gas to escape from 1-liter container punctured by a $1-mm^2$ hole.
+        
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
+        \item Your bicycle tire has a slow leak, so that it goes flat within about an hour after being inflated. Roughly how big is the 
+        hole? (Use any reasonable estimate for the volume of the tire.)
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
+        \item In Jules Verne's \emph{Round the Moon}, the escape travelers dispose of a dog's corpse by quickly opening a window,
+        tossing it out, and closing the window. Do you think they can do this quickly enough to prevent a significant amount of air
+        from escaping? Justify your answer with some rough estimates and calculation.
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
+      \end{enumerate}
+
+  \end{enumerate}
+
+\end{document}
