@@ -98,10 +98,114 @@
     \item \textbf{1.15} Estimate the average temperature of the air inside a hot-air balloon (see Figure 1.1). Assume 
     that the total mass of the unfilled balloon and payload is $500 ~ kg$. What is the mass of the air inside the balloon?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
-    
+        \textcolor{hwColor}{
+          \\
+          The atmosphere is filled with air that exerts buoyant force on any object. A hot air balloon rises and 
+          floats due to the buoyant force. It descends when the balloon's weight is higher than the buoyant force. 
+          It becomes stationary when the weight equals the buoyant force.
+          \begin{itemize}
+            \item $M=500 ~ kg$ is the total mass of the unfilled balloon and payload.
+            \item $\rho_{outside}$ is the density of the surrounding air.
+            \item $V=\dfrac{4}{3} \pi r^3$ is the volume of the balloon.
+            \item $\rho_{inside}$ is the density of the air inside of the balloon.
+            \item $g$ is the acceleration of gravity.
+            \item $m=29 \times 10^{-3} ~ kg$ is the mass of one mole of air.
+            \item $T_0=290 ~ K$ is the temperature surrounding the balloon.
+            \item $R=8.314 ~ J/mole.K$ is the molar gas constant.
+            \item $P=1 ~ atm=1.013 \times 10^5 ~ N/m^2$ is the pressure 
+          \end{itemize}
+        }
+        \textcolor{hwColor}{
+          The Archimedes' principle states that any object (regardless of its shape) that is suspended in a fluid 
+          is acted upon by an upward buoyant force equal to the weight of the fluid displaced by the object. Hence we have
+          \\
+          \\
+          $
+            F_B=W_{displaced}
+            \Longrightarrow
+            \rho_{outside} V g=M g+\rho_{inside} V g 
+            \\
+            \\
+            \rho_{outside} V g=\bigg( M+m \bigg) g 
+            \longrightarrow 
+            \rho_{outside} V=M+m
+            \longrightarrow
+            \text{We know that} ~ \rho_{inside} \equiv \dfrac{m}{V} 
+            \\
+            \\
+            \therefore ~~~ \rho_{outside} V=M+\rho_{inside} ~ V
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \dfrac{M}{V}=\rho_{outside}-\rho_{inside}
+            } ~~~~ \checkmark ~~~~~~ (A)
+            \\
+            \\
+            \\
+            \begin{cases}
+              \rho_{inside}=\dfrac{m ~ n}{V}
+              \\
+              \\
+              PV=nRT
+            \end{cases} \Longrightarrow \boxed{
+              \rho_{inside}=\dfrac{mP}{RT}
+            } ~~~~ \checkmark ~~~~~~ (B)
+            \\
+            \\
+            \\
+          $
+          Plugging in $(B)$ into $(A)$ gives:
+          \\
+          \\
+          $
+            \dfrac{M}{V}=\rho_{outside}-\rho_{inside}=\dfrac{mP}{RT_0}-\dfrac{mP}{RT}=\dfrac{mP}{R} \bigg( \dfrac{1}{T_0}-\dfrac{1}{T} \bigg)
+            \Longrightarrow \dfrac{R M}{mPV}=\dfrac{1}{T_0}-\dfrac{1}{T}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \dfrac{1}{T}=\dfrac{1}{T_0}-\dfrac{RM}{mPV}
+            } ~~~~ \checkmark ~~~~~~ (C)
+            \\
+            \\
+            \\
+          $
+          Looked up an average diameter of a balloon is around 15 meters. So we have the volume of the balloon as 
+          $\dfrac{4}{3} ~ \pi \bigg( \dfrac{15}{2} \bigg)^3 \approx 1767.1458 ~ m^3$. Now we just need to plug in all the values we 
+          have into equation $(C)$.
+          \\
+          \\
+          $
+            \dfrac{1}{T}=\dfrac{1}{290 ~ k}-\dfrac{
+               \bigg(8.314 ~ J/mole.K\bigg)  \bigg( 500 ~ kg \bigg)
+            }{
+              \bigg( 29 \times 10^{-3} ~ kg \bigg) \bigg( 1.013 \times 10^5 ~ N/m^2 \bigg) \bigg( 1767.1458 ~ m^3 \bigg)     
+            }
+            \\
+            \\
+            \\
+            \boxed{
+              T=377.7119 ~ K
+            }
+            \\
+            \\
+            \\
+            M_{air}=nm=m\dfrac{PV}{RT}=\bigg( 29 \times 10^{-3} ~ kg \bigg) \dfrac{
+              \bigg( 1.013 \times 10^5 ~ N/m^2 \bigg) \bigg( 1767.1458 ~ m^3 \bigg)
+            }{
+              \bigg(8.314 ~ J/mole.K\bigg) \bigg(377.7119 ~ K \bigg) 
+            }
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              M_{air}=1653.1377 ~ kg ~~ or ~~~ M_{air} \approx 1650 ~ kg
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
+
     \item \textbf{1.17} Even at low density, real gases don't quite obey the ideal gas law. A systematic way to account for deviations 
     from ideal behavior is the \textbf{virial expansion},
     $$
