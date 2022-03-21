@@ -216,16 +216,58 @@
       \item For each temperature in the table, compute the second term in the virial equation, $B(T)/(V/n),$ for nitrogen at atmospheric
       pressure. Discuss the validity of the ideal gas law under these conditions.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          With a good approximation we can ignore all the other terms in the parenthesis except the first term since their denominators
+          are way larger than their denominators, therefore their values are pretty small. With this assumption we have.
+          \\
+          \\
+          $
+            PV \approx n ~ RT \bigg(1+\dfrac{B(T)}{(V/n)}\bigg)
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \dfrac{V}{n}=\dfrac{RT}{P}
+            } ~~~~ \checkmark
+            \\
+            \\
+            \begin{cases}
+              T=100 \Longrightarrow \dfrac{-160 \times 10^{-6}}{\bigg(8.314 ~ J/mole.K\bigg)(100 K)/1.013 \times 10^5 ~ N/m^2}=-0.0194
+              \\
+              \\
+              T=200 \Longrightarrow \dfrac{-35 \times 10^{-6}}{\bigg(8.314 ~ J/mole.K\bigg)(200 K)/1.013 \times 10^5 ~ N/m^2}=-0.0021
+              \\
+              \\
+              T=300 \Longrightarrow \dfrac{-4.2 \times 10^{-6}}{\bigg(8.314 ~ J/mole.K\bigg)(300 K)/1.013 \times 10^5 ~ N/m^2}=-0.000170
+              \\
+              \\
+              T=400 \Longrightarrow \dfrac{9 \times 10^{-6}}{\bigg(8.314 ~ J/mole.K\bigg)(400 K)/1.013 \times 10^5 ~ N/m^2}=0.00027
+              \\
+              \\
+              T=500 \Longrightarrow \dfrac{16.9 \times 10^{-6}}{\bigg(8.314 ~ J/mole.K\bigg)(500 K)/1.013 \times 10^5 ~ N/m^2}=0.00041
+              \\
+              \\
+              T=600 \Longrightarrow \dfrac{21.3 \times 10^{-6}}{\bigg(8.314 ~ J/mole.K\bigg)(600 K)/1.013 \times 10^5 ~ N/m^2}=0.00043
+            \end{cases}
+          $
+          \\
+          \\
+          We see that at higher temperatures the correction to the ideal las gas at atmospheric pressure is becooming really small. 
+          And at a given volume the pressure is around 2\% smaller.
+          \\
+          \\
+        }
 
       \item Think about the forces between molecules, and explain why we might expect $B(T)$ to be negative at low temperatures but positive 
       at high temperatures.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          We know that the pressure of a gas is a measure of the average momentum of moving molecules of a gas. The forces between
+          molecules is either attarctive or repulsive. Attractive forces between them are in lower temperatures whereas repulsive forces
+          are in higher temperatures, since the molecules move slowly in low temperatures. Also, attraction forces between
+          molecules (at low temperatures) should decrease the pressure showing the virial coefficient term negative, hence $B(T)$ is negative.  
+        }
 
       \item Any proposed relation between $P, V,$ ans $T$, like the ideal gas law or the virial equations, is called an \textbf{equation of state}.
       Another famous equation of state, which is qualitatively accurate even for dense fluids, is the \textbf{van der Waals equation},
@@ -237,17 +279,87 @@
       $(1+x)^p \approx 1+px+\dfrac{1}{2} p(p-1) x^2$, provided that $|px|<<1$. Apply this approximation to the quantity 
       $\left[1-(nb/V)\right]^{-1}$).
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \bigg(P+\dfrac{an^2}{V^2}\bigg) \bigg(V-nb\bigg)=nRT
+            \\
+            \\
+            PV+\dfrac{an^2}{V}=n\dfrac{RT}{1-\dfrac{nb}{V}} 
+            \\
+            \\
+            PV=nRT \left[\dfrac{1}{1-\dfrac{nb}{V}}-\dfrac{an}{VRT}\right]
+            \\
+            \\
+            PV=nRT \left[\dfrac{1}{1-\dfrac{nb}{V}}-\dfrac{an}{(V/n)RT}\right]
+            \\
+            \\
+            PV=nRT \left[1+\dfrac{nb}{V}+\bigg( \dfrac{nb}{V} \bigg)^2-\dfrac{an}{(V/n)RT}\right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              PV=nRT \left[
+                1+\dfrac{1}{V/n} \bigg( b-\dfrac{a}{RT}\bigg)+\dfrac{b^2}{(V/n)^2}
+              \right]=nRT \left[
+                1+\dfrac{B}{\bigg( \dfrac{V}{n} \bigg)}+\dfrac{C}{\bigg( \dfrac{V}{n} \bigg)^2}
+              \right]
+            } ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \Longrightarrow \boxed{
+              \begin{cases}
+                B=b-\dfrac{a}{RT}
+                \\
+                \\
+                C=b^2
+              \end{cases}
+            } ~~~~ \checkmark
+          $
+        }
 
       \item Plot a graph of the van de Waals prediction for $B(T)$, choosing a and b so as to approximately match the data given above for nitrogen. 
       Discuss the accuracy of the van der Waals equation over this range of conditions. (The van der Waals equation is discussed much further 
       in Section 5.3.)
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            B=b-\dfrac{a}{RT} \Longrightarrow b=B+\dfrac{a}{RT}
+          $
+          \\
+          \\
+          Our given data is from $100$ to $600$ Kelvin, so let's find an approximation for $a$ and $b$ based on the two values:
+          \\
+          \\
+          $
+            \begin{cases}
+              B_{600}= \left[B_100+\dfrac{a}{RT}\right]-\dfrac{a}{600 \times R} 
+              \longrightarrow 21.3= \left[-160+\dfrac{a}{RT}\right]-\dfrac{a}{600 \times 8.314} \Longrightarrow a=1.8145 \times 10^5 ~ cm^3.J(mole)^2
+              \\
+              \\
+              b=B_{100}+\dfrac{1.8145 \times 10^5}{8.314 \times 100} \Longrightarrow b=57.89 ~ cm^3/mole
+            \end{cases}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              57.89 ~ cm^3/mole=B+\dfrac{1.8145 \times 10^5 ~ cm^3.J(mole)^2}{T \times \bigg( 8.314 ~ J/mol.K \bigg)}
+            } ~~~~ \checkmark
+          $
+        }
+
+        \begin{center}
+          \includegraphics[height=7cm, width=8cm]{1.JPG}
+        \end{center}
+
+        \textcolor{hwColor}{
+          I draw the plot with my hands so it is not really accurate and nice. I think it is a good fit based on the data based on 
+          the values of $a$ and $b$. but it seems that the van de Waals is not giving very accurate result but does give a good approximation.
+          \\
+          \\
+        }
 
     \end{enumerate}
     
