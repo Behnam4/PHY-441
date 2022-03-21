@@ -391,16 +391,66 @@
         with this surface in a time interval $\Delta t$ is $P ~ A ~ \Delta t/(2m \overline{v_x})$, where $P$ is the pressure, $m$ is the 
         average molecular mass, and $\overline{v_x}$ is the average $x$ velocity of those molecules that collide with the wall.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            On page 11 we learned about $\bar{P}$, and also from equation 1.11 $(\Delta v_x)$. Assuming the collison between 
+            molecules is an elastic one we have:
+            \\
+            \\
+            $
+              \begin{cases}
+                P=N \bar{P} ~~~~ (\text{Totoal pressure}) 
+                \\
+                \\
+                \bar{P}=-\dfrac{m ~ \Delta v_x}{A ~ \Delta t}
+              \end{cases} \Longrightarrow 
+              P=N \left[-\dfrac{m ~ \Delta v_x}{A ~ \Delta t}\right]
+              \\
+              \\
+            $
+            Using the value of $\Delta v_x=-2 \bar{v_x}$ we get:
+            \\
+            \\
+            $
+              P=-N \left[\dfrac{-m \times 2 \bar{v_x}}{A ~ \Delta t}\right]
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                N=\dfrac{PA \Delta t}{2 m \bar{v_x}}
+              } ~~~~ \checkmark ~~~~~~ \text{The number of molecules colliding}
+              \\
+              \\
+            $ 
+          }
 
         \item It is not easy to calculate $\overline{v_x}$, but a good enough approximation is $\overline{v_x}^{1/2}$, where the bar 
         now represents an average over all molecules in the gas. Show that $\overline{v_x}^{1/2}=\sqrt{kT/m}.$
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            $
+              \bar{P}=\sum\limits_{i=1}^{\infty} \dfrac{m v^2_{ix}}{V}
+              \\
+              \\
+              \begin{cases}
+                PV=N m \bar{v}^2_x
+                \\
+                \\
+                PV=N K T
+              \end{cases}
+              \\
+              \\
+              \Longrightarrow N m \bar{v}^2_x=N K T 
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                \sqrt{\bar{v}^2_x}=\sqrt{\dfrac{kT}{m}} \Leftrightarrow \bar{v}^2_x=\dfrac{kT}{m}
+              } ~~~~ \checkmark
+              \\
+            $
+          }
           
         \item If we now take away this small part of the wall of the container, the molecules that would have collided with it will 
         instead escape through the hole. Assuming that nothing enters through the hole, show that the number $N$ of molecules inside
@@ -411,30 +461,112 @@
         Solve this equation (assuming constant temperature) to obtain a formula of the form $N(t)=N(0) ~ e^{-t\tau}$, where $\tau$
         is the "characteristic time" for $N$ (and $P$) to drop by a factor of $e$.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            $
+              -\Delta N=\dfrac{PA \Delta t}{2m} \sqrt{\dfrac{m}{kT}}
+              =\dfrac{
+                A \Delta t \times \bigg( \dfrac{NkT}{V} \bigg)
+              }{
+                2m
+              } \sqrt{\dfrac{m}{kT}}
+              \\
+              \\
+              \\
+              \dfrac{\Delta N}{\Delta t}=-\dfrac{AN}{2V} \sqrt{\dfrac{m}{kT}}
+              \\
+              \\
+              \text{When} \Delta t \Rightarrow 0, \text{then} ~  \dfrac{dN}{dt}=-\dfrac{AN}{2V} \sqrt{\dfrac{m}{kT}}=-\dfrac{1}{\tau} N
+              \\
+              \\
+              \\
+              \bigints\limits_{N(0)}^{N(t)} \dfrac{dN}{N}=-\bigints\limits_{0}^{t} \dfrac{dt}{\tau}
+              \\
+              \\
+              \\
+              \mathbf{ln} \left[\dfrac{N(t)}{N(0)} \right]=-\dfrac{t}{\tau} 
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                N(t)=N(0) e^{-t/\tau}
+              } ~~~~ \checkmark
+              \\
+            $
+          }
+
+        \pagebreak
 
         \item Calculate the characteristic time for a gas to escape from 1-liter container punctured by a $1-mm^2$ hole.
         
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            $
+              \dfrac{dN}{dt}=-\dfrac{1}{\tau} N
+              \\
+              \\
+              \dfrac{A}{2V} \sqrt{\dfrac{kT}{m}}=\dfrac{1}{\tau}
+              \\
+              \\
+              \\
+              \sqrt{\dfrac{RT}{M}}=\sqrt{\dfrac{(8.3 ~ J.mol.K)(300 ~ K)}{29 \times 10^{-3}}} \approx 293 ~ m/s
+              \\
+              \\
+              V=(1 lt) \left[1000 ~ m^3/1 lt\right]=0.001 ~ m^3
+              \\
+              \\
+              \\
+              A=(1 ~ mm^2) \left[1 ~ m/1000 ~ mm\right]=10^{-6} ~ m^2
+              \\
+              \\
+              \tau=\dfrac{2V}{A} \sqrt{\dfrac{m}{kT}}=\dfrac{2(0.001 ~ m^3)}{(10^{-6})(293 ~ m/s)}
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                \tau \approx 6.9 ~ s
+              }
+              \\
+            $
+          }
 
         \item Your bicycle tire has a slow leak, so that it goes flat within about an hour after being inflated. Roughly how big is the 
         hole? (Use any reasonable estimate for the volume of the tire.)
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            $
+              V=\pi (0.02 ~ m)^2 ~ (2m)=0.0025 ~ m^3, ~~~~ \tau=1 ~ hr= 3600 ~ s
+              \\
+              \\
+              A=\dfrac{2V}{\tau \sqrt{RT/M}}=\dfrac{2(0.0025 ~ m^3)}{(3600 ~ s) (300 ~ m/s)}
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                A=5 \times 10^{-9} ~ m^2
+              } ~~~ \checkmark
+              \\
+            $
+          }
 
         \item In Jules Verne's \emph{Round the Moon}, the escape travelers dispose of a dog's corpse by quickly opening a window,
         tossing it out, and closing the window. Do you think they can do this quickly enough to prevent a significant amount of air
         from escaping? Justify your answer with some rough estimates and calculation.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+          \textcolor{hwColor}{
+            \\
+            $
+              \tau=\dfrac{2V}{A\sqrt{RT/M}}=\dfrac{2(50 ~ m^3)}{0.2 ~ m^2 ~ \left(293 ~ m/s\right)}
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                \tau=1.7 ~ s
+              } ~~~~ \checkmark
+            $
+            \\
+          }
 
       \end{enumerate}
 
