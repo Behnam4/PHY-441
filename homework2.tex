@@ -346,30 +346,102 @@
 
         \textcolor{hwColor}{
           \\
+          The adiabatic exponent of air is $1.4$.
+          \\
+          \\
+          $
+            P_f ~ V_f^{\gamma}=P_i ~ V_i^{\gamma} \Longrightarrow V_f=V_i \bigg( \dfrac{P_i}{P_f} \bigg)^{1/\gamma}
+            \\
+            \\
+            \\
+            V_f=V_i \bigg( \dfrac{P_i}{P_f} \bigg)^{1/\gamma}=\bigg( 1 ~ liter \bigg) \bigg( \dfrac{1 ~ atm}{7 ~ atm} \bigg)^{1/1.4}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              V_f \approx 0.25 ~ liters
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
         }
+        % \bigg( \bigg)
 
       \item How much work is done in compressing the air?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            W=-\bigints P ~ dV =-P_i ~ V^{\gamma}_i \bigints\limits_{V_i}^{V_f} ~ V^{-\gamma} ~ dV
+            =-P_i ~ V^{\gamma}_i \bigg( \dfrac{V^{-\gamma+1}}{-\gamma+1}\bigg) \bigg|_{V_i}^{V_f}
+            \\
+            \\
+            \\
+            \therefore ~~~ \dfrac{1 ~ liter \times atm}{2/5} \left[4^{2/5}-1\right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              W \approx 188 ~ J
+            } ~~~~ \checkmark
+          $
+        }
       
       \item If the temperature of the air is initially $300 ~ K$, what is the temperature after compression?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            V_f ~ T^{f/2}_f=V_i ~ T^{f/2}_i \Longrightarrow T_f=T_i \bigg( \dfrac{V_i}{V_f} \bigg)^{2/f}
+            \\
+            \\
+            \\
+            T_f=\bigg( 300 ~ K \bigg) \bigg( \dfrac{1 ~ liter}{0.25 ~ liters} \bigg)^{2/5}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              T_f=522 ~ K
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
     \end{enumerate}
-
 
     \item \textbf{1.42} The specific heat capacity of Albertson's \emph{Rotini Tricolore} is approximately $1.8 ~ J/g.^{\circ}C$. Suppose 
     you toss 340 g of this pasta (at $25^{\circ}C$) into 1.5 liters of boling water. What effect does this have on the temperature of the
     water (before there is time for the stove to provide more heat)?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+      \textcolor{hwColor}{
+        \\
+        Assumption: The heat lost by the water (w) equals the heat gained by the pasta (p). Therefore
+        \\
+        \\
+        $
+          T_f=\dfrac{
+            m_w ~ c_w ~ T_w + m_p ~ c_p ~ T_p
+          }{
+            m_w c_w+m_p c_p
+          }
+          =\dfrac{
+            \bigg( 1.5 ~ kg \bigg) \bigg( 4.186 J/g.^{\circ} C \bigg) \bigg( 100^{\circ} C\bigg)+ \bigg( 0.34 ~ kg \bigg) \bigg( 1.8 ~ J/g.^{\circ} C \bigg) \bigg( 25^{\circ} C \bigg)
+          }{
+            \bigg( 1.5 ~ kg \bigg) \bigg( 4.186 ~ J/g.^{\circ} C \bigg) + \bigg( 0.34 ~ kg \bigg) \bigg( 1.8 ~ J/g.^{\circ} C \bigg)
+          }
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            T_f=93.3391^{\circ}C
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+        Based on the fact that the boiling point of water is defined as $100^{\circ}C$ and $T_f=93.3391^{\circ}C$, then
+        it is safe to say that the temperature of the water drops by roughly $7^{\circ}C$.
+      }
 
   \end{enumerate}
 
