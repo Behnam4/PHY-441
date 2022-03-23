@@ -107,43 +107,109 @@
         \\ 
       }
 
+    \pagebreak
+
     \item \textbf{1.31} Imagine some helium in a cylinder with an intial volume of $1 ~ liter$ and an initial
-    pressure of $1 ~ atm$.Somehow the helium is made to expand to a final volume of 3 liters, in such a way 
+    pressure of $1 ~ atm$. Somehow the helium is made to expand to a final volume of 3 liters, in such a way 
     that its pressure rises in direct proportion to its volume.
     \begin{enumerate}
       \item Sketch a graph of pressure vs.volume for this process.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \begin{center}
+        \includegraphics[height=8cm, width=11cm]{2.JPG}
+      \end{center}
 
       \item Calculate the work done on the gas during this process, assuming that there are no "other"
       types of work being done.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+        \textcolor{hwColor}{
+          \\
+          The area under the graph can be split into two standard shapes; A triangle and rectangle. Based on the assumtion 
+          that there are no other types of work being done, and with the help of equation (1.28) we have the following result. 
+          \\
+          \\
+          $
+            W=-P ~ \Delta V=-\bigg( 2 ~ liters \times 1 ~ atm\bigg)+ \bigg( \dfrac{2 ~ liters \times 2 atm}{2} \bigg)
+            \\
+            \\
+            =-\bigg( 0.002 ~ m^3 \times 101325 ~ N/m^2 \bigg)+ \bigg( \dfrac{ 0.002 ~ m^3 \times 202650 ~ N/m^2 }{2} \bigg)
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              W=-405.3 ~ J
+            } ~~~~ \checkmark
+            \\
+            \\
+          $ 
+        }
 
       \item Calculate the change in the helium's energy content during this process.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+        \textcolor{hwColor}{
+          \\
+          From quiz one I learned that Helium atoms have three degrees of freedom, therefore their thermal energy can be calculated 
+          with the following formula:
+          \\
+          \\
+          $
+            U=\dfrac{3}{2} ~ N K_B ~ T=\dfrac{3}{2} PV 
+            \\
+            \\
+            \Delta U=\dfrac{3}{2} \left[U_f-U_i\right]
+            =\dfrac{3}{2} \left[P_f V_f-P_f V_f\right]
+            =\dfrac{3}{2} \left[
+              \bigg( 3 ~ atm \times 3 ~ liters \bigg)
+              -
+              \bigg( 1 ~ atm \times 1 ~ liters \bigg)
+            \right]
+            \\
+            \\
+            \\
+            =\dfrac{3}{2} \left[
+              \bigg( 303975 ~ N/m^2 \times 0.003 ~ m^3 \bigg)
+              -
+              \bigg( 101325 ~ N/m^2 \times 0.001 ~ m^3 \bigg)
+            \right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \Delta U \approx 1215.9 ~ J
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item Calculate the amount of heat added to or removed from the helium during this process.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+        \textcolor{hwColor}{
+          \\
+          $
+            Q=\Delta U-W=1215.9-\bigg(-405.3 \bigg)
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              Q=1621.2 ~ J
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item Describe what you might do to cause the pressure to rise as the helium expands.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+        \textcolor{hwColor}{
+          \\
+          One way can be to increase the temperature of the gas by holding fire under the cylinder containing Helium. With 
+          the increase in the heat, the pressure rises too.
+        }
 
     \end{enumerate}
 
+    \pagebreak
 
     \item \textbf{1.33} an ideal gas is made to undergo the cyclic process shown in Figure 1.10(a). For
     each of the steps A, B, and C, determine whether each of the following is positive, negative , or zero: 
