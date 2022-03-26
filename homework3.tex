@@ -1,0 +1,213 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{442020}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Statistical/Thermal Physics}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Homework 3}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Michael Treacy}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  From the Schroeder book, do problems 1.46, 1.47, 1.54, 2.1, 2.3 and 2.10 
+  (the last two involve a computer; Python, MatLab, C/C++, fortran etc. are great, 
+  but Excel will work too). This homework is due Wednesday, February 3.
+
+  \begin{enumerate}
+    \item \textbf{1.46} Measured heat capacities of solids and liquids are almost always at constant  pressure,
+    not constant volume. To see why, estimate the pressure needed to keep $V$ fixed as $T$ increases, as follows
+
+    \begin{enumerate}
+      \item First imagine slightly increasing the temperature of a material...
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+
+      \item Now imagine slightly compressing the material, holding its temperature fixed...
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Finally imagine that you compress the material just enough in part (b) to offset...
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+
+      \item Compute $\beta, \kappa_T,$ and $\bigg( \dfrac{\partial P}{\partial T} \bigg)_V$ for an ideal gas...
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item For water at $25^{\circ}, ~ \beta=2.57 \times 10^{-4} ~ K^{-1}$ and $\kappa_T=4.52 \times 10^{-10} ~ Pa^{-1}$...
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+    
+    
+    \item \textbf{1.47} Your $200-g$ cup of tea is boiling-hot. About how much ice should you add to bring 
+    it down to a comfortable sipping temperature of $65^{\circ} ~ C$? (Assume that the ice is initially 
+    at $-15^{\circ} ~ C$. The specific heat capacity of ice is $0.5 ~ cal/g.^{\circ}C.$) 
+
+
+    \item \textbf{1.54} A $60-kg$ hiker wishes to climb to the summit of Mt.Ogden an ascent of $5000$ vertical
+    feet (1500 m).
+    \begin{enumerate}
+      \item Assuming that she is $25\%$ efficient at converting chemical energy...
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item As the hiker climbs the mountain, three-quarters of the energy from...
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item In fact, the extra energy does not warm the hiker's body significantly; instead, it goes (mostly)...
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+
+
+    \item \textbf{2.1} Suppose you flip four fair coins.
+    \begin{enumerate}
+      \item Make a list of all the possible outcomes, as Table 2.1.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Make a list of all different "macrostates" and their probabilities.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Compute the multiplicity of each macrostate usuing the combinatorial formula 2.6, and check 
+      that these results agree with what you got by bruteforce counting.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+      
+    \end{enumerate}
+
+
+    \item \textbf{2.3} Suppose you flip 50 fair coins.
+    \begin{enumerate}
+      \item How many possible outcomes (microstates) are there?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item How many ways are there of getting exacty 25 heads and 25 tails?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item What is the probability of getting exactly 25 heads and 25 tails?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item What is the probability of getting exactly 30 heads and 20 tails?
+      
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item What is the probability of getting exactly 40 heads and 10 tails?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item What is the probability of getting 50 heads and no tails?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Plot a graph of the probability of getting n heads, as a function of n.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+
+    \item \textbf{2.10} Use a computer to produce a table and graph, like those in this section, for the case
+    where one Einstein solid contains 200 oscillators, the other contains 100 oscillator, and there are 
+    100 units of energy in total. What is the most probable macrostate, and what is its probability? What
+    is the least probable macrostate, and what is its probability?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+  \end{enumerate}
+
+\end{document}
