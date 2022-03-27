@@ -56,10 +56,6 @@
 
   \end{titlepage}
 
-  From the Schroeder book, do problems 1.46, 1.47, 1.54, 2.1, 2.3 and 2.10 
-  (the last two involve a computer; Python, MatLab, C/C++, fortran etc. are great, 
-  but Excel will work too). This homework is due Wednesday, February 3.
-
   \begin{enumerate}
     \item \textbf{1.46} Measured heat capacities of solids and liquids are almost always at constant  pressure,
     not constant volume. To see why, estimate the pressure needed to keep $V$ fixed as $T$ increases, as follows
@@ -67,43 +63,203 @@
     \begin{enumerate}
       \item First imagine slightly increasing the temperature of a material...
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
-
+        \textcolor{hwColor}{
+          \\
+          $\beta$ is the thermal expansion coefficient which is 
+          $$
+            \beta \equiv \dfrac{1}{V} \dfrac{dV}{dT}
+          $$
+          Fromm ideal gas law we have:
+          \\
+          \\
+          $
+            \dfrac{dV_1}{dT}=\bigg( \dfrac{dV}{dT} \bigg)_P
+            \Longrightarrow dV_1=dT \bigg( \dfrac{dV}{dT} \bigg)_P
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              dV_1=\beta V dT
+            } ~~~~ \checkmark
+          $
+          \\
+          \\
+        }
 
       \item Now imagine slightly compressing the material, holding its temperature fixed...
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \bigg( \dfrac{dV}{dP} \bigg)_T=\dfrac{dV_2}{dP}
+            \Longrightarrow dV_2=dP \bigg( \dfrac{dV}{dP} \bigg)_T
+            \\
+            \\
+            \\
+            \text{Isothermal compressibility as defined as }
+            \\
+            \\
+            \kappa_T=-\dfrac{1}{V} \bigg( \dfrac{\partial V}{\partial P} \bigg)_T
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              dV_2=-V \kappa_T ~ dP
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item Finally imagine that you compress the material just enough in part (b) to offset...
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
-
+        \textcolor{hwColor}{
+          \\
+          $
+            \text{Since the net change in volume is zero we have}
+            \\
+            \\
+            dV_1+dV_2=0
+            \\
+            \\
+            \begin{cases}
+              dV_1=V \beta ~ dT 
+              \\
+              \\
+              dV_2=-\kappa_T V ~ dP 
+            \end{cases}
+            \Longrightarrow V \beta ~ dT-\kappa_T V ~ dP=0 
+            \Longrightarrow \bigg( \dfrac{\partial P}{\partial T}\bigg)_V=\dfrac{\beta}{\kappa_T}
+            \\
+            \\
+            \\
+            \Longrightarrow \boxed{\beta=\dfrac{1}{V} \bigg( \dfrac{\partial V}{\partial T} \bigg)_P}
+            \\
+            \\
+            \\
+            \text{Plugging in $\kappa_T$ and $\beta$ in $\bigg( \dfrac{\partial P}{\partial T} \bigg)=\dfrac{\beta}{\kappa_T}$ gives}
+            \\
+            \\
+            \\
+            \bigg( \dfrac{\partial P}{\partial T} \bigg)
+            =-\dfrac{
+              \dfrac{1}{V} \bigg( \dfrac{\partial V}{\partial T} \bigg)_P
+            }{
+              \dfrac{1}{V} \bigg( \dfrac{\partial V}{\partial P} \bigg)_T
+            }
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \bigg( \dfrac{\partial P}{\partial T} \bigg)=-\dfrac{
+                \bigg( \dfrac{\partial V}{\partial T} \bigg)_P
+              }{
+                \bigg( \dfrac{\partial V}{\partial P} \bigg)_T
+              }
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item Compute $\beta, \kappa_T,$ and $\bigg( \dfrac{\partial P}{\partial T} \bigg)_V$ for an ideal gas...
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \begin{cases}
+              \beta=\dfrac{1}{V} \bigg( \dfrac{\partial V}{\partial T} \bigg)_P
+              =\dfrac{1}{V} \bigg( \dfrac{\partial N k T/P}{\partial T} \bigg)_P
+              =\dfrac{1}{V} \dfrac{N k}{P}
+              =\dfrac{1}{T}
+              \\
+              \\
+              \kappa_T=-\dfrac{1}{V} \bigg( \dfrac{\partial V}{\partial P} \bigg)_T
+              =-\dfrac{1}{V} \bigg( \dfrac{\partial NkT/P}{\partial P} \bigg)_T
+              =-\dfrac{1}{V} \bigg( -\dfrac{NkT}{P^2} \bigg)=\dfrac{1}{P}
+            \end{cases}
+            \\
+            \\
+            \\
+            \bigg( \dfrac{\partial P}{\partial T} \bigg)_V=\dfrac{\partial}{\partial T} \bigg( \dfrac{NkT}{V} \bigg)=\dfrac{Nk}{V}=\dfrac{P}{T}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \bigg( \dfrac{\partial P}{\partial T} \bigg)_V=\dfrac{\beta}{\kappa_T}
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item For water at $25^{\circ}, ~ \beta=2.57 \times 10^{-4} ~ K^{-1}$ and $\kappa_T=4.52 \times 10^{-10} ~ Pa^{-1}$...
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            dP=\dfrac{\beta}{\kappa_T} dT
+            \\
+            \\
+            \\
+            \text{Change in temperature of water}
+            \\
+            \\
+            \\
+            dT=\bigg( 30+273\bigg)-\bigg( 20+273\bigg)=10 ~ K
+            \\
+            \\
+            \\
+            dP=\dfrac{
+              \bigg( 2.57 \times 10^{-4} ~ K^{-1} \bigg) \times \bigg( 10 ~ K\bigg)
+            }{
+              \bigg( 4.52 \times 10^{-10} ~ Pa^{-1} \bigg)
+            }=5.69 \times 10^6 ~ Pa ~~~~ \text{The pressure for preventing the expansion of water}
+            \\
+            \\
+            \\
+            \\
+            dP=\dfrac{
+              \bigg( 1.81 \times 10^{-4} ~ K^{-1} \bigg) \times \bigg( 10 ~ K\bigg)
+            }{
+              \bigg( 4.04 \times 10^{-11} ~ Pa^{-1} \bigg)
+            }
+            =4.48 \times 10^7 ~ Pa ~~~~ \text{The pressure for preventing the expansion of mercury}
+            \\
+            \\
+            \\
+          $
+          Based on the calculated results, It's a better choice to measure $C_P$ which is at constant pressure.
+          \\
+        }
 
     \end{enumerate}
     
-    
-    \item \textbf{1.47} Your $200-g$ cup of tea is boiling-hot. About how much ice should you add to bring 
+    \item \textbf{1.47} Your $200 ~ g$ cup of tea is boiling-hot. About how much ice should you add to bring 
     it down to a comfortable sipping temperature of $65^{\circ} ~ C$? (Assume that the ice is initially 
     at $-15^{\circ} ~ C$. The specific heat capacity of ice is $0.5 ~ cal/g.^{\circ}C.$) 
 
+        \textcolor{hwColor}{
+          \\
+          $
+            Q=mc \Delta T=\bigg( 0.2 ~ kg \bigg) \bigg( 1 ~ cal/g.^{\circ}C. \bigg) \bigg( 100^{\circ}-65^{\circ} \bigg)
+            \Longrightarrow Q=7000 ~ cal
+            \\
+            \\
+            \\
+            \text{For tea} ~~ Q=m \bigg( 0.5 ~ cal/g.^{\circ}C. \bigg) \bigg( 15^{\circ} \bigg)
+            +m \bigg( 80 ~ cal/g \bigg)
+            +m\bigg( 1 ~ cal/g.^{\circ}C. \bigg) \bigg( 65^{\circ} \bigg)
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              m=46 ~ grams
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
     \item \textbf{1.54} A $60-kg$ hiker wishes to climb to the summit of Mt.Ogden an ascent of $5000$ vertical
     feet (1500 m).
@@ -113,7 +269,7 @@
         % \textcolor{hwColor}{
         %   \\
         % }
-
+      % \bigg( \bigg)
       \item As the hiker climbs the mountain, three-quarters of the energy from...
 
         % \textcolor{hwColor}{
