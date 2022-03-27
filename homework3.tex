@@ -381,47 +381,127 @@
     \begin{enumerate}
       \item How many possible outcomes (microstates) are there?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \text{Total number of possible outcomes (heads or tails) }
+            \\
+            \\
+            \Omega(\text{all})=2^{50} ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item How many ways are there of getting exacty 25 heads and 25 tails?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \Omega(25 ~ \text{Heads})=\dfrac{50!}{\bigg( 25! \bigg) \bigg( 25! \bigg)}
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \Omega(25 ~ \text{Heads})=1.26 \times 10^{14}
+            }
+            \\
+            \\
+          $
+        }
 
       \item What is the probability of getting exactly 25 heads and 25 tails?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            P(25 ~ \text{Heads})=\dfrac{\Omega(25 ~ \text{Heads})}{\Omega(\text{all})}
+            =\dfrac{
+              \dfrac{50!}{\bigg( 25! \bigg) \bigg( 25! \bigg)}
+            }{
+              2^{50}
+            }
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              P(25 ~ \text{Heads})=0.112
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item What is the probability of getting exactly 30 heads and 20 tails?
       
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            P(30 ~ \text{Heads})=\dfrac{\Omega(30 ~ \text{Heads})}{\Omega(\text{all})}
+            =\dfrac{
+              \dfrac{50!}{\bigg( 30! \bigg) \bigg( 20! \bigg)}
+            }{
+              2^{50}
+            }
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              P(30 ~ \text{Heads})=0.041
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item What is the probability of getting exactly 40 heads and 10 tails?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            P(40 ~ \text{Heads})=\dfrac{\Omega(40 ~ \text{Heads})}{\Omega(\text{all})}
+            =\dfrac{
+              \dfrac{50!}{\bigg( 40! \bigg) \bigg( 10! \bigg)}
+            }{
+              2^{50}
+            }
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              P(30 ~ \text{Heads})=9.12 \times 10^{-6}
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item What is the probability of getting 50 heads and no tails?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+            $
+            P(50 ~ \text{Heads})=\dfrac{\Omega(50 ~ \text{Heads})}{\Omega(\text{all})}
+            =\dfrac{
+              \dfrac{50!}{\bigg( 50! \bigg) \bigg( 0! \bigg)}
+            }{
+              2^{50}
+            }
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              P(30 ~ \text{Heads})=8.88 \times 10^{-16}
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
       \item Plot a graph of the probability of getting n heads, as a function of n.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+      \begin{center}
+        \includegraphics[height=12cm, width=15cm]{4.JPG}
+      \end{center}
 
     \end{enumerate}
+
+    \pagebreak
 
     \item \textbf{2.10} Use a computer to produce a table and graph, like those in this section, for the case
     where one Einstein solid contains 200 oscillators, the other contains 100 oscillator, and there are 
