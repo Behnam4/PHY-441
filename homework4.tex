@@ -181,61 +181,183 @@
     \begin{enumerate}
       \item Sketch a graph of the natural logarithm function.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+      \begin{center}
+        \includegraphics[height=6cm, width=11cm]{1.JPG}
+      \end{center}
+
+      \pagebreak
 
       \item Prove the identities
       $$
-        ln ~ ab=ln ~ a+ln ~ b, ~~~~~~ ln ~ a^b=bln ~ a
+        ln(ab)=ln(a)+ln(b), ~~~~~~ ln ~ a^b=b ~ ln(a)
       $$
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+      \textcolor{hwColor}{
+        \\
+        $
+          ln(ab)=ln(a)+ln(b)=m+n \Longrightarrow \begin{cases}
+            m=ln(a) \longrightarrow e^m=a
+            \\
+            n=ln(b) \longrightarrow e^n=b
+          \end{cases}
+          \\
+          \\
+          \\
+          a b=e^m+e^n=e^{m+n}
+          \\
+          \\
+          \Longrightarrow ln(ab)=ln(e^{m+n})=\bigg( m+n \bigg) ~ ln(e)=m+n
+          \\
+          \\
+          \\
+          \therefore ~~~ ln(ab)=m+n=ln(a)+ln(b)
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            ln(ab)=ln(a)+ln(b)
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \\
+          \\
+          \\
+          ln ~ a^b=b ~ ln(a)
+          \\
+          \\
+          \text{If } m=ln(a), \text{ then }
+          \\
+          \\
+          e^m=a
+          \\
+          \\
+          \therefore ~~~ \bigg( e^m \bigg)^b=\bigg( a \bigg)^b
+          \\
+          \\
+          \therefore ~~~ ln\bigg( e^{mb} \bigg)=ln\bigg( a^b\bigg)=mb
+          \\
+          \\
+          \therefore ~~~ ln\bigg( e^{mb} \bigg)=ln\bigg( a^b\bigg)=ln(a) \times b
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            ln ~ a^b=b ~ ln(a)
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
       \item Prove that $\dfrac{d}{dx} ln ~ x=\dfrac{1}{x}$.
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+        \textcolor{hwColor}{
+          \\
+          $
+            y=ln(x) \Longrightarrow e^y=x
+            \\
+            \\
+            \dfrac{dx}{dy}=e^y \Longrightarrow \dfrac{dy}{dx}=\dfrac{1}{e^y}=\dfrac{1}{x}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \dfrac{d}{dx} ln ~ x=\dfrac{1}{x}
+            } ~~~~ \checkmark
+            \\
+            \\
+          $
+        }
 
+% \bigg( \bigg)
       \item Derive the useful approximation 
       $$
         ln \bigg( x+1 \bigg) \approx x
       $$
       which is valid when $|x| << 1$. Use a calculator to check the accuracy of this approximationfor $x=0.1$ and $x=0.01$
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+        \textcolor{hwColor}{
+          \\
+          With the help of Taylor series we have
+          \\
+          \\ 
+          $
+            ln \bigg( x+1 \bigg)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}+...
+            \\
+            \\
+            \\
+            ln \bigg( 0.01+1 \bigg)=0.00995033085317
+            \\
+            \\
+            \\
+            ln \bigg( 0.01+1 \bigg)=0.01-\dfrac{0.01^2}{2}+\dfrac{0.01^3}{3}=0.00995033333333
+            \\
+            \\
+          $
+          As we can see when $x << 1$ then the difference between $ln \bigg( x+1 \bigg) \approx x$ 
+          gives an accurate result since the two numbers above are off by $\approx 0.05$ which is a good
+          approximation.
+          \\
+        }
 
     \end{enumerate}
 
     \item \textbf{2.13}  Fun with logarithms.
     \begin{enumerate}
-      \item Simplify the expression $e^{a ~ ln ~ b}$. (That is, write it in a way that doesn't involve logarithms.)
+      \item Simplify the expression $e^{a ~ ln(b)}$. (That is, write it in a way that doesn't involve logarithms.)
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+        \textcolor{hwColor}{
+          \\
+          $
+            e^{a ~ ln(b)}=e^{ln b^a}=b^a
+            \\
+          $
+        }
 
       \item Assuming that $b << a$, prove that $ln \bigg( a+b \bigg) \approx \bigg( ln ~ a\bigg)+\bigg( \dfrac{b}{a}\bigg)$.
       (Hint: Factor out the $a$ from the argument of the algorithm, so that you can apply the approximation of part (d)
       of the previous problem.)
 
-          % \textcolor{hwColor}{
-          %   \\
-          % }
+        \textcolor{hwColor}{
+          \\
+          $
+            ln \bigg( a+b \bigg)=ln \left[a\bigg( 1+\dfrac{b}{a} \bigg)\right]=ln(a)+ln \bigg( 1+\dfrac{b}{a} \bigg)
+            \\
+            \\
+          $
+          Knowing that $ln \bigg( x+1 \bigg) \approx x$ then $\dfrac{b}{a} << 1$.
+          \\
+          \\
+          $
+            \therefore ~~~ ln(a)+ln \bigg( 1+\dfrac{b}{a} \bigg)=ln(a)+\dfrac{b}{a}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              ln \bigg( a+b \bigg) \approx \bigg( ln ~ a\bigg)+\bigg( \dfrac{b}{a}\bigg)
+            } ~~~~ \checkmark
+            \\
+          $
+        }
 
     \end{enumerate}
 
     \item \textbf{2.14} Write $e^{10^{23}}$ in the form  $10^x$, for some $x$.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+      \textcolor{hwColor}{
+        \\
+        $
+          e^{10^{23}}=10^x \Longrightarrow ln\bigg( e^{10^{23}} \bigg)=ln\bigg( 10^x \bigg)
+          \\
+          \\
+          \therefore ~~~ 10^{23}=x ~ ln(10)
+          \Longrightarrow \boxed{
+            x=\dfrac{10^23}{ln(10)}=4.34 \times 10^{22}
+          } ~~~~ \checkmark
+        $
+      }
 
+% \bigg( \bigg)
     \item \textbf{2.16} Suppose you flip 1000 coins.
     \begin{enumerate}
       \item What is the probability of getting exactly 500 heads and 500 tails?
