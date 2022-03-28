@@ -514,23 +514,58 @@
     \begin{enumerate}
       \item How many microstates are "accessible" to this system?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
-
+        \textcolor{hwColor}{
+          \\
+          Sterling's approximation $N!=N^N ~ e^{-N} ~ \sqrt{2\pi N}$. 
+          \\
+          \\
+          $
+            \Omega(N, \dfrac{N}{2})=\dfrac{
+              N^N ~ e^{-N} ~ \sqrt{2\pi N}
+            }{
+              \left[\bigg( \dfrac{N}{2} \bigg)^{N/2}  e^{-N/2}  \sqrt{2 \pi N/2 } \right]^2
+            }=2^N ~ \sqrt{\dfrac{2}{\pi N}}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \Omega(N, \dfrac{N}{2})=2^N ~ \sqrt{\dfrac{2}{\pi N}}
+            } ~~~~ \checkmark
+            \\
+          $
+        }
+      % \bigg( \bigg)
       \item Suppose that the microstate of this system changes a billion times per second. How many microstates will it
       explore in ten billion years (the age of the universe)?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \begin{cases}
+              \text{1 year}=3 \times 10^7 ~~ seconds
+              \\
+              \\
+              \text{10 billion years}=3 \times 10^{17} ~~ seconds=3 \times 10^{26} ~ nanoseconds
+            \end{cases}
+            \\
+            \\
+          $
+          Knowing that the microstate of this system changes once per nanoseconds, then the microstates of this system during 
+          the age of the universe is $2^{{10}^{23}}$.
+          \\
+          \\
+        }
 
       \item Is it correct to say that, if you wait long enough, a system will eventually be found in every "accessible" microstate?
       Explain your answer, and discuss the meaning of the word "accessible".
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          The system explores almost none of its "accessible" microstates even after waiting for the age of the universe. 
+          It is possible the system at some point explores any microstates in the future, but the probability of being in any
+          specific microstate is pretty small.
+          \\
+        }
         
     \end{enumerate}
   \end{enumerate}
