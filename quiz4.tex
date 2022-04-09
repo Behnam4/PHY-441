@@ -77,27 +77,225 @@
     \item Use the expression for $U(T)$, given by the equipartition theorem for a monatomic gas, to form
     a new equation for the entropy, $S(N,V,T)$, with $U$ eliminated.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        If a system contains $N$ molecules, each with $f$ degrees of freedom, and there are no other 
+        temperature-dependent forms of energy, then its total thermal energy is 
+        $U_{thermal}=N.f.\dfrac{1}{2} kT$. In a gas of monatomic molecules like Helium only translational 
+        motions counts, so each molecule has three degree of freedom, that is, $f=3$ Therefore, $U(T)$ for 
+        a monatomic gas is:
+        \\
+        \\
+        $
+          U(T)=N.3.\dfrac{1}{2}kT=\dfrac{3}{2} NkT
+          \\
+          \\
+          \begin{cases}
+            PV=nRT
+            \\
+            \\
+            PV=NKT
+          \end{cases} \Longrightarrow nRT=NkT \Longrightarrow \boxed{N=\dfrac{nR}{k}}
+          \\
+          \\
+          \\
+          U(T)=\dfrac{3}{2} NkT=\dfrac{3}{2} \bigg( \dfrac{nR}{k} \bigg) kT
+          \Longrightarrow \boxed{
+            U(T)=\dfrac{3}{2} nRT
+          }
+          \\
+          \\
+          \\
+          S(N,V,U)=N k_B \left[
+            ln \bigg( \dfrac{V}{N} \bigg( \dfrac{4 \pi m U}{3 N h^2} \bigg)^{3/2}\bigg)+\dfrac{5}{2}
+          \right]
+          =N k_B \left[
+            ln \bigg( \dfrac{V}{N} \bigg( \dfrac{4 \pi m \bigg( \dfrac{3}{2} nRT \bigg)}{3 N h^2} \bigg)^{3/2}\bigg)+\dfrac{5}{2}
+          \right]
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            S(N,V,T)=N k_B \left[
+              ln \bigg( \dfrac{V}{N} \bigg( \dfrac{2 \pi m n R T}{N h^2} \bigg)^{3/2}\bigg)+\dfrac{5}{2}
+            \right]
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
-    \item If the ideal monatomic gas changes from state 1, $(N,V_1,T_1)$ to state 2, $(N,V_2,T_2) $while 
+    \pagebreak
+
+    \item If the ideal monatomic gas changes from state 1, $(N,V_1,T_1)$ to state 2, $(N,V_2,T_2)$ while 
     conserving N, use the previous result to show that the entropy change is given by a formula of the type,
     $$
       \Delta S=S_2-S_1=A(N) ln \bigg( \dfrac{V_2}{V_1} \bigg)+B(N) ln \bigg( \dfrac{T_2}{T_1} \bigg)
     $$
     and determine the coefficients $A(N)$ and $B(N)$.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        Let's start off with simplifying the Natural logarithm value
+        \\
+        \\
+        $
+          ln \bigg( \dfrac{V}{N} \bigg( \dfrac{2 \pi m n R T}{N h^2} \bigg)^{3/2}\bigg)
+          =ln \bigg( \dfrac{V}{N} \bigg)+ln \bigg( \dfrac{2 \pi m n R T}{N h^2} \bigg)^{3/2}
+          =ln V-ln N+\dfrac{3}{2} ln \bigg( \dfrac{2 \pi m n R T}{N h^2} \bigg)
+          \\
+          \\
+          \\
+          =ln V-ln N+\dfrac{3}{2} \left[
+            ln \bigg(2 \pi m n R T \bigg)-ln \bigg( N h^2 \bigg)
+          \right]
+          =ln V-ln N+\dfrac{3}{2} \left[
+            ln \bigg( T \bigg)+ln \bigg(2 \pi m n R \bigg)-ln \bigg( N h^2 \bigg)
+          \right]
+          \\
+          \\
+          \\
+          =ln V-ln N+\dfrac{3}{2} \left[
+            ln \bigg( T \bigg)+ln \bigg( \dfrac{2 \pi m n R}{N h^2} \bigg)
+          \right]
+          =ln V-ln N+\dfrac{3}{2} ln \bigg( T \bigg)+\dfrac{3}{2} ln \bigg( \dfrac{2 \pi m n R}{N h^2} \bigg)
+          \\
+          \\
+        $
+        We are told that $N$ is conserbed therefore $-ln N+\dfrac{3}{2} ln \bigg( \dfrac{2 \pi m n R}{N h^2} \bigg)$ gives a constant
+        value, hence:
+        \\
+        \\
+        $
+          S(N,V,T)=N k_B \left[
+            ln V+\dfrac{3}{2} ln \bigg( T \bigg)+\text{constant}+\dfrac{5}{2}
+          \right]
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            S(N,V,T)=N k_B \left[
+              ln V+\dfrac{3}{2} ln \bigg( T \bigg)+\text{constant}
+            \right]
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \\
+          \\
+          \\
+          \Delta S=S_2(N,V_2,T_2)-S_1(N,V_1,T_1)
+          =N k_B \left[
+            ln V_2+\dfrac{3}{2} ln \bigg( T_2 \bigg)+\text{constant}
+          \right]-N k_B \left[
+            ln V_1+\dfrac{3}{2} ln \bigg( T_1 \bigg)+\text{constant}
+          \right]
+          \\
+          \\
+          \\
+          =N k_B \left[
+            \left[ ln V_2+\dfrac{3}{2} ln \bigg( T_2 \bigg)+\text{constant} \right]
+            -
+            \left[ ln V_1+\dfrac{3}{2} ln \bigg( T_1 \bigg)+\text{constant} \right]
+          \right]
+          \\
+          \\
+          \\
+          =N k_B \left[
+            ln V_2+\dfrac{3}{2} ln \bigg( T_2 \bigg)+\text{constant}
+            -ln V_1-\dfrac{3}{2} ln \bigg( T_1 \bigg)-\text{constant}
+          \right]
+          \\
+          \\
+          \\
+          =N k_B \left[
+            ln \bigg( \dfrac{V_2}{V_1} \bigg)+\dfrac{3}{2} ln \bigg( \dfrac{T_2}{T_1} \bigg)
+          \right]
+          \\
+          \\
+          \\
+          \Delta S=N k_B ~ ln \bigg( \dfrac{V_2}{V_1} \bigg)+N k_B ~ \dfrac{3}{2} ln \bigg( \dfrac{T_2}{T_1} \bigg)
+          \\
+          \\
+          \\
+          \begin{cases}
+            A(N)=N k_B
+            \\
+            \\
+            B(N)=N k_B ~ \dfrac{3}{2}
+          \end{cases} 
+          \Longrightarrow 
+          \boxed{
+            \Delta S=A(N) ~ ln \bigg( \dfrac{V_2}{V_1} \bigg)+B(N) ln \bigg( \dfrac{T_2}{T_1} \bigg)
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
     \item If this transition from state 1 to state 2 is adiabatic, use the adiabatic relationship between $V$
     and $T$ to determine the change in entropy, using the equation you derived in part (2) above.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        In page 26 of the textbook we learned that for an adiabatic process $V^{\gamma} P=constant=C_1$.
+        \\
+        \\
+        $
+          PV=nRT \Longrightarrow \dfrac{PV}{T}=nR=\text{constant}=C_2
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            P=\dfrac{T C_2}{V}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \therefore ~~~ V^{\gamma} P= V^{\gamma} \dfrac{T C_2}{V}=C_1
+          \Longrightarrow \boxed{V^{\gamma-1} T=C} ~~~~ \checkmark ~~ \text{This result is true for an adiabatic process}
+          \\
+          \\
+          \\
+          V^{\gamma-1}_1 T_1=V^{\gamma-1}_2 T_2 \Longrightarrow \bigg( \dfrac{V_1}{V_2} \bigg)^{\gamma-1}=\dfrac{T_2}{T_1}
+          \\
+          \\
+          \\
+          \Delta S=A(N) ~ ln \bigg( \dfrac{V_2}{V_1} \bigg)+B(N) ln \bigg( \dfrac{T_2}{T_1} \bigg)
+          =A(N) ~ ln \bigg( \dfrac{V_2}{V_1} \bigg)+B(N) ln \bigg( \dfrac{V_1}{V_2} \bigg)^{\gamma-1}
+          \\
+          \\
+          \\
+          =A(N) ~ ln \bigg( \dfrac{V_2}{V_1} \bigg)+B(N) \bigg( \gamma-1 \bigg) ln \bigg( \dfrac{V_1}{V_2} \bigg)
+          =A(N) ~ ln \bigg( \dfrac{V_2}{V_1} \bigg)+B(N) \bigg( 1-\gamma \bigg) ln \bigg( \dfrac{V_2}{V_1} \bigg)
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \Delta S=ln \bigg( \dfrac{V_2}{V_1} \bigg) \left[A(N)+B(N) \bigg( 1-\gamma \bigg)\right]
+          }
+          \\
+          \\
+          \\
+        $
+        For a monatomic gas $\gamma=\dfrac{5}{3}$ therefore:
+        \\
+        \\
+        $
+          \Delta S=ln \bigg( \dfrac{V_2}{V_1} \bigg) \left[N k_B+N k_B ~ \dfrac{3}{2} \bigg( 1-\dfrac{5}{3} \bigg)\right]
+          =ln \bigg( \dfrac{V_2}{V_1} \bigg) \left[N k_B+N k_B ~ \dfrac{3}{2} \bigg( -\dfrac{2}{3} \bigg)\right]
+          \\
+          \\
+          \\
+          =ln \bigg( \dfrac{V_2}{V_1} \bigg) \left[N k_B-N k_B\right]
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \Delta S=0
+          } ~~~~ \checkmark
+        $
+      }
 
   \end{enumerate}
 
