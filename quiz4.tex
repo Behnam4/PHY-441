@@ -1,0 +1,104 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{442020}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Statistical/Thermal Physics}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Quiz 4}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Michael Treacy}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  By signing my name, I am promising that I did this quiz on my own without any outside help.
+
+  \vspace{0.5cm}
+
+  Name: \textbf{Behnam Amiri}
+
+  \vspace{1cm}
+
+  The Sackur-Tetrode equation for the entropy, $S$, of a monatomic ideal gas is
+  $$
+    S(N,V,U)=N k_B \left[
+      ln \bigg( \dfrac{V}{N} \bigg( \dfrac{4 \pi m U}{3 N h^2} \bigg)^{3/2}\bigg)+\dfrac{5}{2}
+    \right].
+  $$
+  $k_B$ is Boltzmann's constant; $N$ is the number of atoms in the volume $V$; m is the atomic mass; $U$
+  is the internal energy of the gas, and $h$ is Planck's constant.
+
+  \begin{enumerate}
+    \item Use the expression for $U(T)$, given by the equipartition theorem for a monatomic gas, to form
+    a new equation for the entropy, $S(N,V,T)$, with $U$ eliminated.
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+    \item If the ideal monatomic gas changes from state 1, $(N,V_1,T_1)$ to state 2, $(N,V_2,T_2) $while 
+    conserving N, use the previous result to show that the entropy change is given by a formula of the type,
+    $$
+      \Delta S=S_2-S_1=A(N) ln \bigg( \dfrac{V_2}{V_1} \bigg)+B(N) ln \bigg( \dfrac{T_2}{T_1} \bigg)
+    $$
+    and determine the coefficients $A(N)$ and $B(N)$.
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+    \item If this transition from state 1 to state 2 is adiabatic, use the adiabatic relationship between $V$
+    and $T$ to determine the change in entropy, using the equation you derived in part (2) above.
+
+      % \textcolor{hwColor}{
+      %   \\
+      % }
+
+  \end{enumerate}
+
+\end{document}
