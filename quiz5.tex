@@ -207,26 +207,85 @@
     \item If I transfer 1 Joule of heat to the gas and the entropy changes by $0.0025 ~ J/K$, estimate the
     temperature of the gas. What assumptions are you making?
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          \Delta S=\dfrac{Q}{T} \Longrightarrow T=\dfrac{Q}{\Delta S}=\dfrac{1 ~ J}{0.0025 ~ k/J}=400 ~ k
+          \\
+          \\
+          \text{Knowing the initial gas temperature which is } 300 ~ k \text{ we have:}
+          \\
+          \\
+          T_{final}=300 ~ k+400 ~ k=700 ~ k
+          \\
+          \\
+          \text{Assumed that the entrophy change was constant.}
+          \\
+        $
+      }
 
     \item A container has a partition separating one mole of helium from $\dfrac{1}{2}$ mole of helium, both sides at
     the same temperature and pressure. The partition is removed and the two gases mix. What is the entropy of 
     mixing? Give your answer as a multiple of $R$.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        To calculate the entropy of mixing gases, we can treat each gas as a separate system, even after they mix. So
+        we have:
+        \\
+        \\
+        $
+          \Delta S_{total}=\Delta S_A+\Delta S_B=0
+          \\
+          \\
+        $
+        Mixing of two identical ideal gases with the same temperature and pressure, results in entropy change of zero.
+        \emph{(page 80 of the textbook)} Therefore, the entropy stays the same for this case.
+        \\
+      }
 
     \item A container has a partition separating one mole of helium from $\dfrac{1}{2}$ mole of neon 
     (Ne is monatomic), both sides at the same temperature and pressure. The partition is removed and 
     the two gases mix. Now what is the entropy of mixing? Give your answer as a multiple of R. (Do not evaluate
     logarithms.)
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          dS=\dfrac{1}{T} ~ \bigg( \dfrac{nRT}{V} \bigg) dV=\dfrac{nR}{V} dV
+          \\
+          \\
+          \Delta S=\bigints\limits_{V_i}^{V_f} \dfrac{nR}{V} dV=nR ~ ln \dfrac{V_f}{V_i}
+          \\
+          \\
+          \\
+          \begin{cases}
+            \Delta S_A=n_A R ~ ln \dfrac{V_{tot}}{V_A}
+            \\
+            \\
+            \Delta S_B=n_B R ~ ln \dfrac{V_{tot}}{V_B}
+          \end{cases} \Longrightarrow \Delta S_{mix}=n_A R ~ ln \bigg( \dfrac{V_{tot}}{V_A} \bigg)
+          +n_B R ~ ln \bigg( \dfrac{V_{tot}}{V_B} \bigg), ~~~ V=\dfrac{nRT}{P}
+          \\
+          \\
+          \\
+          \Delta S_{mix}=n_A R ~ ln \bigg( \dfrac{n_{tot}}{n_A} \bigg)+n_B R ~ ln \bigg( \dfrac{n_{tot}}{n_B} \bigg)
+          =-n_A R ~ ln \bigg( \dfrac{n_A}{n_{tot}} \bigg)-n_B R ~ ln \bigg( \dfrac{n_B}{n_{tot}} \bigg)
+          \\
+          \\
+          \\
+          \Delta S_{mix}=-\dfrac{1}{2} R ~ ln \bigg( \dfrac{0.5}{1.5} \bigg)
+          -R ~ ln \bigg( \dfrac{1}{1.5} \bigg)
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{\Delta S_{mix}}{R}=\left[
+              -\dfrac{1}{2} ~ ln \bigg( \dfrac{0.5}{1.5} \bigg)-ln \bigg( \dfrac{1}{1.5} \bigg)
+            \right]
+          } ~~~~ \checkmark
+        $
+      }
 
   \end{enumerate}
 
