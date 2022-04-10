@@ -111,23 +111,98 @@
 
     \item Calculate the heat added to the gas (as $Q/R$) if the pressure is held constant.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        For this case the pressure is constant. The first law of thermodynamics states that 
+        $\Delta U=Q+W$. Also, we learned that $W=-P \Delta V$.
+        \\
+        \\
+        $
+          \begin{cases}
+            Q=\Delta U-W
+            \\
+            \\
+            Q=n C_P \Delta T
+            \\
+            \\
+            W=-P \Delta V=-nR \Delta T
+          \end{cases}
+          \\
+          \\
+          \\
+          \text{For a monatomic ideal gas } \Delta U=\dfrac{3}{2} nR \Delta T
+          \\
+          \\
+          \\
+          Q=\dfrac{3}{2} n R \Delta T- \bigg( -n R \Delta T \bigg)=\dfrac{5}{2} n R \Delta T
+          \\
+          \\
+          \\
+          Q=\dfrac{5}{2} \bigg( 1 ~ mol \bigg) R \bigg( 400 ~ k-300 ~ k \bigg)=\dfrac{5}{2} R \bigg( 100 \bigg)
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{Q}{R}=250
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
     \item Calculate the total entropy increase (as $\Delta S/R$) if the volume is held constant. (Do not evaluate
     logarithms.)
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        From problem $2.34$ of the textbook learned that for a monatomic ideal gas, the change in entropy is related to
+        the heat inout $Q$ by $\Delta S=\dfrac{Q}{T}$ which is valid for any quasistatic process. Note that we are 
+        tiold the volume is contant.
+        \\
+        \\
+        $
+          Q=\bigints\limits_{V_i}^{V_f} \Delta S=\bigints\limits_{V_i}^{V_f} \dfrac{NkT}{V} dV=NkT ~ ln \dfrac{V_f}{V_i}
+          \Longrightarrow \dfrac{Q}{T}=\Delta S ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \Delta S=\bigints \dfrac{1}{T} dQ
+          =\bigints \dfrac{1}{T} d\bigg( n C_V T \bigg)
+          =\bigints \dfrac{n C_V}{T} dT
+          =n C_V \bigints\limits_{300}^{400} \dfrac{1}{T} dT
+          =1 \times \dfrac{3}{2}R ~ ln\bigg( \dfrac{400}{300} \bigg)
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{\Delta S}{R}=\dfrac{3}{2} ln\bigg( \dfrac{4}{3} \bigg)
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
     \item Calculate the total entropy increase (as $\Delta S/R$) if the pressure is held constant. (Do not evaluate
     logarithms.)
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          \Delta S=\bigints \dfrac{1}{T} dQ
+          =\bigints \dfrac{1}{T} d\bigg( n C_P T \bigg)
+          =\bigints \dfrac{n C_P}{T} dT
+          =n C_P \bigints\limits_{300}^{400} \dfrac{1}{T} dT
+          =1 \times \dfrac{5}{2}R ~ ln\bigg( \dfrac{400}{300} \bigg)
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{\Delta S}{R}=\dfrac{5}{2} ln\bigg( \dfrac{4}{3} \bigg)
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
     \item If I transfer 1 Joule of heat to the gas and the entropy changes by $0.0025 ~ J/K$, estimate the
     temperature of the gas. What assumptions are you making?
