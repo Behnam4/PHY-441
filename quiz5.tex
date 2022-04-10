@@ -70,9 +70,44 @@
   \begin{enumerate}
     \item Calculate the heat added to the gas (as $Q/R$) if the volume is held constant.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        The first law of thermodynamics states that $\Delta U=Q+W$. Also, we learned that $W=-P \Delta V$.
+        \\
+        \\
+        $
+          Q=\Delta U+P \Delta V, ~~ \text{since the volume is held constant then } \Delta V=0.
+          \\
+          \\
+          \begin{cases}
+            Q=\Delta U+0
+            \\
+            \\
+            C_V=\dfrac{Q}{\Delta T}
+          \end{cases} \Longrightarrow C_V=\bigg( \dfrac{\partial U}{\partial T} \bigg)_V
+          \\
+          \\
+          \\
+          \text{For a monatomic ideal gas } \Delta U=\dfrac{3}{2} nR \Delta T
+          \\
+          \\
+          \\
+          \therefore ~~~ Q=\Delta U=n C_V \Delta T=\dfrac{3}{2} nR \Delta T
+          \Longrightarrow C_V=\dfrac{3}{2} R ~~~~ \checkmark
+          \\
+          \\
+          \\
+          Q=\Delta U=\dfrac{3}{2} \bigg( 1 ~ mol \bigg) R \bigg( 400 ~ k-300 ~ k \bigg)=150R
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{Q}{R}=150 
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
     \item Calculate the heat added to the gas (as $Q/R$) if the pressure is held constant.
 
