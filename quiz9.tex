@@ -177,12 +177,78 @@
         $
       }
 
+    \pagebreak
+
     \item \textbf{(10 points)} Consider a large system of hypothetical atoms that have just two energy states: a
     ground state with zero energy, and an excited state at $0.01 ~ eV$. Estimate the mean energy per
     atom at $T=300 ~ K$.
 
       \textcolor{hwColor}{
         \\
+        $
+          \text{Since } \sum \dfrac{n^*_i}{N}=1 ~ \text{then} ~ Z=\sum\limits_{i} e^{-\dfrac{E_i}{KT}}.
+          \\
+          \\
+          \\
+          \begin{cases}
+            E_1=0
+            \\
+            \\
+            E_2=0.01 ~ eV
+          \end{cases}
+          \therefore ~~~ Z=e^{-\dfrac{E_1}{KT}}+e^{-\dfrac{E_2}{KT}}
+          =e^{-\dfrac{0}{KT}}+e^{-\dfrac{0.01}{KT}}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            Z=1+e^{-\dfrac{1}{100KT}}, \text{or} ~~~ Z(\beta)=1+e^{-0.01 \beta}, ~~ \text{where} ~~ \beta=\dfrac{1}{KT}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \text{Avearge Energy:}
+          \\
+          \\
+          \begin{cases}
+            \text{Average Energy: } \langle E \rangle=\dfrac{1}{Z} \sum E ~ e^{-E \beta}
+            \\
+            \\
+            \text{Total Energy: } \langle E \rangle=-\dfrac{1}{Z} \dfrac{\partial Z}{\partial \beta}
+          \end{cases}
+          \\
+          \\
+          \\
+          \langle E \rangle=-\dfrac{1}{Z} \dfrac{\partial Z}{\partial \beta}
+          =-\dfrac{1}{1+e^{-0.01 \beta}} \dfrac{\partial}{\partial \beta} \bigg( 1+e^{-0.01 \beta} \bigg)
+          =-\dfrac{1}{1+e^{-0.01 \beta}} \bigg( -0.01 e^{-0.01 \beta} \bigg)
+          \\
+          \\
+          \\
+          \\
+          \beta=\dfrac{1}{KT}=\dfrac{1}{\bigg( 1.381 \times 10^{-23} ~ J/K \bigg) \bigg( 300 ~ K \bigg)}
+          =\dfrac{1}{4.143 \times 10^{-21} ~ J}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \beta=\dfrac{1}{0.025858573 ~ eV}
+          }
+          \\
+          \\
+          \\
+          \therefore ~~~ \langle E \rangle
+          =\dfrac{0.01 e^{-0.01 \beta}}{1+e^{-0.01\beta}}
+          =\dfrac{\bigg( 0.01 ~ eV \bigg) e^{-\bigg( 0.01 ~ eV \bigg) \bigg( \dfrac{1}{0.025858573 ~ eV} \bigg)}}{1+e^{-\bigg( 0.01 ~ eV \bigg) \bigg( \dfrac{1}{0.025858573 ~ eV}  \bigg) }}
+          =0.0040450 ~ eV
+          \\
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \langle E \rangle \approx 4.045 ~ meV
+          } ~~~~ \checkmark
+        $
       }
 
   \end{enumerate}
