@@ -72,20 +72,198 @@
       \begin{enumerate}
         \item (4 points) Evaluate, numerically, the partition function.
 
+          \textcolor{hwColor}{
+            \\
+            In the Boltzmann Distribution lecture, we learned that $Z=\sum\limits_{i} e^{-\lambda_2 E_i}$. For 
+            finding the value of $\lambda$, we need to look at the energy of the system. We are considering a 
+            thermodynamics system at a temperature $T$. By doing some mathematical reasoning, $\lambda_2$ was 
+            found as $\lambda_2=\dfrac{1}{K_B ~ T}$.
+            Since $\sum\limits_{i} \dfrac{n^*_i}{N}=1$ then $Z=\sum\limits_{i} exp\bigg( -\dfrac{E_i}{K_B T} \bigg)$.
+            \\
+            \\
+            With the help of Calculus, we can rewrite the above series as
+            \\
+            \\
+            $
+              \sum\limits_{n=0} exp\bigg( -\dfrac{E_i}{K_B T} \bigg)=\dfrac{1}{1-e^{\epsilon/K_B T}}
+              =\dfrac{e^{\epsilon/K_B T}}{e^{\epsilon/K_B T}-1}, ~~~~ (\text{Geometric serie})
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{Z=\dfrac{e^{\epsilon/K_B T}}{e^{\epsilon/K_B T}-1}}
+              \\
+              \\
+              \\
+              Z=\dfrac{
+                e^{0.01 \times \dfrac{1}{0.025}}
+              }{
+                e^{0.01 \times \dfrac{1}{0.025}}-1
+              }
+              =\dfrac{
+                e^{0.4}
+              }{
+                e^{0.4}-1
+              }
+              \Longrightarrow
+              ~~~ \boxed{
+                Z \approxeq 3.033 ~ eV
+              }
+              \\
+              \\
+            $
+          }
 
         \item (4 points) What is the average energy of the system (in $eV$)?
 
+          \textcolor{hwColor}{
+            \\
+            The average energy is:
+            \\
+            \\
+            $
+              \langle E \rangle=\dfrac{1}{Z} \sum\limits_{s} E(s) e^{-\beta E(s)}, ~~~~ \beta=\dfrac{1}{K_B T}
+              \\
+              \\
+            $
+            Also, from the lecture we learned that the average energy can be found directly from the partition function
+            by differentiating it.
+            \\
+            \\
+            $
+              \langle E \rangle=-\dfrac{1}{Z} \dfrac{\partial Z}{\partial \beta}
+              \\
+              \\
+              \\
+              \dfrac{\partial Z}{\partial \beta}
+              =\dfrac{\partial}{\partial \beta} \bigg( \dfrac{1}{1-e^{\epsilon \beta}} \bigg)
+              =\dfrac{0-(-\epsilon e^{\epsilon \beta})}{(1-e^{\epsilon \beta})^2}
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                \langle E \rangle=-\dfrac{1}{Z} \dfrac{\epsilon e^{\epsilon \beta}}{(1-e^{\epsilon \beta})^2}, ~~~~ \beta=\dfrac{1}{0.025}=40
+              } ~~~~ \checkmark
+              \\
+              \\
+              \\
+              \langle E \rangle=-\dfrac{1}{3.033} \dfrac{0.01 e^{ 0.01 \times 40 }}{(1-e^{0.01 \times 40})^2}
+              \\
+              \\
+              \\
+              \Longrightarrow \langle E \rangle \approxeq -0.02033 ~ eV
+              \\
+            $
+          }
 
         \item (4 points) What is the heat capacity of the system (in $eV/K$)?
+
+          \textcolor{hwColor}{
+            \\
+            $
+              U=-\dfrac{\partial}{\partial \beta} \bigg( \ln(\dfrac{1}{1-e^{-\epsilon \beta}}) \bigg)
+              =-(1-e^{-\beta \epsilon}) \dfrac{d}{d\beta} \bigg( \dfrac{1}{1-e^{-\beta \epsilon}} \bigg)
+              \\
+              \\
+              \\
+              =-(1-e^{-\beta \epsilon}) \dfrac{\epsilon e^{\beta \epsilon}}{(1-e^{-\beta \epsilon})^2}
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{U=\dfrac{\epsilon e^{-\beta \epsilon}}{1-e^{-\beta \epsilon}}}
+              \\
+              \\
+              \\
+              \beta=\dfrac{1}{K_B T} \Longrightarrow \dfrac{\partial \beta}{\partial T}=-\dfrac{1}{K_B T^2} ~~~~ \checkmark
+              \\
+              \\
+              \\
+              \begin{cases}
+                \dfrac{\partial}{\partial T} e^{-\epsilon/K_B T}=e^{-\epsilon/K_B T} \dfrac{-\epsilon}{K_B T^2}
+                \\
+                \\
+                \dfrac{\partial}{\partial T} (1-e^{-\epsilon/K_B T})=e^{-\epsilon/K_B T} \dfrac{\epsilon}{K_B T^2}
+              \end{cases}
+              \\
+              \\
+              \\
+              C_V=\bigg( \dfrac{\partial U}{\partial T} \bigg)_V
+              =\dfrac{\partial}{\partial T} \left[
+                \dfrac{
+                  \epsilon e^{-\epsilon/K_B T}
+                }{
+                  1-e^{-\epsilon/K_B T}
+                }
+              \right]
+              =\epsilon \left[
+                \dfrac{
+                  e^{-\epsilon/K_B T} \dfrac{-\epsilon}{K_B T^2} \bigg( 1-e^{-\epsilon/K_B T} \bigg)-e^{-\epsilon/K_B T} e^{-\epsilon/K_B T} \dfrac{\epsilon}{K_B T^2}
+                }{
+                  \bigg( 1-e^{-\epsilon/K_B T} \bigg)^2
+                }
+              \right]
+              \\
+              \\
+              \\
+              =\dfrac{\epsilon^2}{K_B T^2} \left[
+                \dfrac{
+                  -e^{-\epsilon/K_B T} (1-e^{-\epsilon/K_B T})-e^{-2 \epsilon/K_B T}
+                }{
+                  \bigg( 1-e^{-\epsilon/K_B T} \bigg)^2
+                }
+              \right], ~~~~~ \dfrac{\epsilon^2}{K_B T^2}=\dfrac{\epsilon}{K_B T} \dfrac{\epsilon}{T}
+              =\dfrac{0.01}{0.025} \dfrac{0.01}{290} \approxeq 1.4 \times 10^{-5}
+              \\
+              \\
+              \\
+              C_V=\bigg( 1.4 \times 10^{-5} \bigg) \left[
+                \dfrac{
+                  -e^{-0.01/0.025} (1-e^{-0.01/0.025})-e^{-0.02/0.025}
+                }{
+                  \bigg( 1-e^{-0.01/0.025} \bigg)^2
+                }
+              \right]
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                |C_V|=8.63 \times 10^{-5}
+              } ~~~~ \checkmark
+              \\
+              \\
+            $
+            Note that the given system has $10^6$ potential wells, hence;
+            \\
+            \\
+            $
+              \boxed{
+                C_{V_{Total}}=10^6 \times 8.63 \times 10^{-5}=86.3
+              } ~~~~ \checkmark
+              \\
+              \\
+            $
+          }
+
       \end{enumerate}
     
     \item For the $O_2$ molecules in the air of your room (at $300 ~ K)$:
       \begin{enumerate}
         \item (4 points) Calculate their most probable speed (in $m/s$);
 
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
         \item (4 points) Calculate their average speed (in $m/s$);
 
+          % \textcolor{hwColor}{
+          %   \\
+          % }
+
         \item (4 points) Calculate their r.m.s. speed (in $m/s$).
+
+          % \textcolor{hwColor}{
+          %   \\
+          % }
 
       \end{enumerate}
 
@@ -102,6 +280,10 @@
       \dfrac{\dot{N}_O}{\dot{N}_N}=\alpha \dfrac{N_O}{N_N}, ~~~~ \alpha \neq 1.
     $$
     (6 points) Calculate $\alpha$.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
 
   \end{enumerate}
 
