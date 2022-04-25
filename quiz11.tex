@@ -110,37 +110,114 @@
           \\
           \\
           \\
-          \Longrightarrow v_Q \approxeq 5 \times 10^{-11}
+          \Longrightarrow v_Q \approxeq 1.2629 \times 10^{-31}
           \\
           \\
           \\
           \therefore ~~~ \boxed{
-            \dfrac{V}{v_Q}=\dfrac{10^{-3}}{5 \times 10^{-11}}=2 \times 10^7
+            \dfrac{V}{v_Q}=\dfrac{10^{-3}}{1.2629 \times 10^{-31}}=8 \times 10^{27}
           } ~~~~ \checkmark
           \\
         $
       }
 
+    \pagebreak
+
     \item (6 points) Estimate the temperature, $T_c$, at which the quantum volume equals the volume per
     particle, i.e. at what $T_c$ does $v_Q=V/N$?
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          v_Q=\bigg( \dfrac{h}{\sqrt{2 \pi m K T}} \bigg)^3=\dfrac{V}{N}
+          \\
+          \\
+          \\
+          N h^3=V \bigg( 2 \pi m K T \bigg)^{2/3}
+          \\
+          \\
+          \\
+          \left[N h^3\right]^{3/2}=\left[V \bigg( 2 \pi m K T \bigg)^{2/3}\right]^{3/2}
+          \\
+          \\
+          \\
+          \left[N h^3\right]^{3/2}=2 \pi m K T V^{3/2}
+          \\
+          \\
+          \\
+          \Longrightarrow T=\dfrac{
+            \left[N h^3\right]^{3/2}
+          }{
+            2 \pi m K V^{3/2}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          T=\dfrac{
+            \left[(2.4144 \times 10^{11}) (6.626 \times 10^{-34})^3 \right]^{3/2}
+          }{
+            2 \pi (6.7 \times 10^{-27}) (1.381 \times 10^{-23}) (10^{-3})^{3/2}
+          }
+          \\
+          \\
+          \\
+          T_c=3.2018 \times 10^{-80} ~ K
+          \\
+        $
+      }
 
     \item (6 points) Assuming that Boltzmann statistics apply, estimate the partition function for the
     translational motions, $Z_{tr}$, at temperature $T_c$.
   
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        Since we are dealing with a container, we are in 3-D dimensional.
+        \\
+        $
+          E=P.E+K.E=\dfrac{p^2}{2m}
+          \\
+          \\
+          Z_{tr}=\dfrac{1}{h^3} \bigints\limits_{0}^{\infty} e^{-\beta E} d^3
+          =\dfrac{4 \pi V}{h^3} \bigints\limits_{0}^{\infty} e^{-\beta \dfrac{p^2}{2m}} d^3
+          =\dfrac{4 \pi V}{h^3} \dfrac{\sqrt{3/2}}{2 (\dfrac{\beta}{2m})^{3/2}}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            Z_{tr}=V \bigg( \dfrac{2 \pi m K_B T}{h^2} \bigg)^{3/2}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          Z_{tr}=10^{-3} \bigg( \dfrac{2 \pi (6.7 \times 10^{-27}) (1.381 \times 10^{-23}) (300)}{(6.626 \times 10^{-34})^2} \bigg)^{3/2}
+          \Longrightarrow Z_{tr}=7.9177 \times 10^{27}
+        $
+      }
+
+    \pagebreak
 
     \item (6 points) Estimate the Helmholtz free energy, $F$ , of the whole system at $T_c$. Give your answer
     in $eV$.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        From page 333 we have:
+        \\
+        \\
+        $
+          F=-K T \ln Z=-K T \ln \bigg( V \bigg( \dfrac{2 \pi m K_B T}{h^2} \bigg)^{3/2} \bigg)
+          \\
+          \\
+          \\
+          =-(8.617 \times 10^{-5} ~ eV/K)(300 ~ K) \ln(7.9177 \times 10^{27})
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            F \approxeq -1.660 
+          } ~~~~ \checkmark
+        $
+      }
 
   \end{enumerate}
 
