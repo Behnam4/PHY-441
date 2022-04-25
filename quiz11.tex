@@ -64,19 +64,62 @@
 
   \vspace{1cm}
 
-  A 1-liter container at $300 ~ K$ contains an ideal gas of 4He atoms at a pressure of $10^{-6} ~ Pa$.
+  A 1-liter container at $300 ~ K$ contains an ideal gas of ${}^4He$ atoms at a pressure of $10^{-6} ~ Pa$.
   \begin{enumerate}
-    \item (6 points) Estimate the number of 4He atoms, $N$ , in the container.
+    \item (6 points) Estimate the number of ${}^4He$ atoms, $N$ , in the container.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          1 ~ liter = 10^{-3} ~ m^3
+          \\
+          \\
+          \\
+          PV=nRT \Longrightarrow n=\dfrac{PV}{RT}=\dfrac{ 10^{-6} ~ Pa \times 10^{-3} ~ m^3 }{8.314 ~ J/mol.K \times 300 ~ K}
+          \\
+          \\
+          \\
+          \Longrightarrow n \approx 4 \times 10^{-13} ~~ mole
+          \\
+          \\
+          \\
+          \text{Number of Atoms}=n \times N_A= 4 \times 10^{-13} \times 6.022 \times 10^{23}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \text{Number of Atoms}=2.4144 \times 10^{11}
+          } ~~~~ \checkmark
+          \\
+        $
+      }
 
     \item (6 points) Estimate the number of quantum volumes in the container, $V/v_Q$, at $300 ~ K$.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        From page 253 we have:
+        \\
+        \\
+        $
+          \text{Mass of Helium-4 is } 6.7 \times 10^{-27} ~ kg
+          \\
+          \\
+          v_Q=\bigg( \dfrac{h}{\sqrt{2 \pi m K T}} \bigg)^3
+          =\bigg( \dfrac{6.626 \times 10^{-34} ~ J.s}{\sqrt{2 \pi (6.7 \times 10^{-27} ~ kg) (1.381 \times 10^{-23} ~ J/K) (300 ~ K)}} \bigg)^3
+          \\
+          \\
+          \\
+          \Longrightarrow v_Q \approxeq 5 \times 10^{-11}
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \dfrac{V}{v_Q}=\dfrac{10^{-3}}{5 \times 10^{-11}}=2 \times 10^7
+          } ~~~~ \checkmark
+          \\
+        $
+      }
 
     \item (6 points) Estimate the temperature, $T_c$, at which the quantum volume equals the volume per
     particle, i.e. at what $T_c$ does $v_Q=V/N$?
@@ -86,7 +129,7 @@
       % }
 
     \item (6 points) Assuming that Boltzmann statistics apply, estimate the partition function for the
-    translational motions, $Z_tr$, at temperature $T_c$.
+    translational motions, $Z_{tr}$, at temperature $T_c$.
   
       % \textcolor{hwColor}{
       %   \\
