@@ -120,11 +120,66 @@
 
       \end{enumerate}
 
+    \pagebreak
+
     \item (15 points) A container with $0.2$ moles of $O_2$ and a container with $0.8$ moles of $N_2$ are connected
     by a closed valve. Both containers are initially at STP. The valve is opened. After some time,
     the gases are thoroughly mixed, quasistatically, by diffusion. What is the final entropy of mixing
     in $J/K$?
 
+      \textcolor{hwColor}{
+        \\
+        STP stands for \textbf{Standard Temperature and Pressure} meaning we can assume that the pressure and temperature
+        for both gases are the same. Once the valve is opened, the entropy increases. To calculate by how much we can 
+        just treat each gas as a separate system, even after they mix. We are given,
+        \\
+        \\
+        $
+          \begin{cases}
+            n_{O_2}=0.2 ~~ \text{moles}
+            \\
+            \\
+            n_{N_2}=0.8 ~~ \text{moles}
+          \end{cases}, ~~~~
+          \begin{cases}
+            \Delta S_{O_2}=n_{O_2} R \ln \bigg( \dfrac{V_{tot}}{V_{O_2}} \bigg)
+            \\
+            \\
+            \Delta S_{N_2}=n_{O_2} R \ln \bigg( \dfrac{V_{tot}}{V_{N_2}} \bigg)
+          \end{cases}, ~~~~~~ V=\dfrac{nRT}{P}
+          \\
+          \\
+          \\
+          \Delta S_{mix}=\Delta S_{O_2}+\Delta S_{N_2}
+          =n_{O_2} R \ln \bigg( \dfrac{V_{tot}}{V_{O_2}} \bigg)+n_{N_2} R \ln \bigg( \dfrac{V_{tot}}{V_{N_2}} \bigg)
+          \\
+          \\
+          \\
+          \Delta S_{mix}=n_{O_2} R \ln \bigg( \dfrac{n_{tot}}{n_{O_2}} \bigg)+n_{N_2} R \ln \bigg( \dfrac{n_{tot}}{n_{N_2}} \bigg)
+          \\
+          \\
+          \\
+          \Delta S_{mix}=\bigg( 0.2 ~ mol\bigg) \bigg( 8.314 ~ J/mol.K \bigg) \ln \bigg( \dfrac{0.2+0.8}{0.2} \bigg)
+          +\bigg( 0.8 ~ mol\bigg) \bigg( 8.314 ~ J/mol.K \bigg) \ln \bigg( \dfrac{0.2+0.8}{0.8} \bigg)
+          \\
+          \\
+          \\
+          \Delta S_{mix}=\bigg( 8.314 ~ J/mol.K \bigg) \left[
+            \bigg( 0.2 ~ mol\bigg) \ln \bigg( \dfrac{0.2+0.8}{0.2} \bigg)+\bigg( 0.8 ~ mol\bigg) \ln \bigg( \dfrac{0.2+0.8}{0.8} \bigg)
+          \right]
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \Delta S_{mix} \approx 4.16 ~ J/K
+          }
+          \\
+          \\
+        $
+        Note that this result can also directly come from the \textbf{Sackur-Tetrode equation}.
+      }
+
+    \pagebreak
 
     \item A 1-liter container, A, holding 0$.1$ mole of air at $20^{\circ} C$ is attached to a second 1-liter container,
     B, holding an additional $0.1$ mole of air at $100^{\circ} C$. The whole A-B assembly is insulated. The
@@ -294,8 +349,3 @@
   \end{enumerate}
 
 \end{document}
-
-
-% \textcolor{hwColor}{
-%   \\
-% }
