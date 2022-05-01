@@ -66,18 +66,59 @@
 
   \begin{enumerate}
     \item Suppose you flip $20$ fair coins.
-    \begin{enumerate}
-      \item (5 points) How many possible outcomes (microstates) are there?
+      \begin{enumerate}
+        \item (5 points) How many possible outcomes (microstates) are there?
 
+          \textcolor{hwColor}{
+            \\
+            We learned that a microstate is one of the outcomes and a macrostate is one of the 
+            collective outcomes. Knowing that we have 20 fair coins (each coin has H and T),
+            then the total number of possible outcomes is $\Omega(20)=2^{20}=1048576$.
+            \\
+          }
 
-      \item (5 points) How many ways are there of getting exactly 10 heads and 10 tails?
+        \item (5 points) How many ways are there of getting exactly $10$ heads and $10$ tails?
 
+          \textcolor{hwColor}{
+            \\
+            The number of ways of getting exactly $10$ heads and $10$ tails is,
+            \\
+            \\
+             $
+              \Omega(10)=\dfrac{20!}{10! ~ 10!}=184756
+              \\
+             $
+          }
 
-      \item (5 points) What is the probability (between 0 and 1) of getting exactly 10 heads and 10
-      tails?
+        \item (5 points) What is the probability (between $0$ and $1$) of getting exactly $10$ heads and $10$
+        tails?
 
-    \end{enumerate}
+          \textcolor{hwColor}{
+            \\
+            The probability of getting exactly $10$ heads and $10$ tails is,
+            \\
+            \\
+            $
+              P=\dfrac{
+                \Omega(10)
+              }{
+                \Omega(20)
+              }=\dfrac{
+                \dfrac{20!}{10! ~ 10!}
+              }{
+                2^{20}
+              }=\dfrac{184756}{1048576}
+              \\
+              \\
+              \\
+              \therefore ~~~ \boxed{
+                P=0.176197052002 ~ \text{or} ~ P \approxeq 17.6197\%
+              }
+              \\
+            $
+          }
 
+      \end{enumerate}
 
     \item (15 points) A container with $0.2$ moles of $O_2$ and a container with $0.8$ moles of $N_2$ are connected
     by a closed valve. Both containers are initially at STP. The valve is opened. After some time,
@@ -247,9 +288,14 @@
       \item (5 points) The degeneracy pressure (in gigapascal);
 
       \item (5 points) The contribution of the degeneracy pressure to the bulk modulus (in gigapascal).
-      
+
     \end{enumerate}
 
   \end{enumerate}
 
 \end{document}
+
+
+% \textcolor{hwColor}{
+%   \\
+% }
