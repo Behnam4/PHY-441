@@ -181,31 +181,227 @@
 
     \pagebreak
 
-    \item A 1-liter container, A, holding 0$.1$ mole of air at $20^{\circ} C$ is attached to a second 1-liter container,
+    \item A 1-liter container, A, holding $0.1$ mole of air at $20^{\circ} C$ is attached to a second 1-liter container,
     B, holding an additional $0.1$ mole of air at $100^{\circ} C$. The whole A-B assembly is insulated. The
     valve separating the containers is opened and the gases are allowed to equilibrate quasistatically.
     \begin{enumerate}
       \item (5 points) What is the equilibrium temperature (in ${}^\circ C$)?
 
+        \textcolor{hwColor}{
+          \\
+          The key point in this problem is that the two containers have the same capacity, 1 liter, which is $0.001 ~ m^3$.
+          They both have the same $C_V$. The total number of moles is the sum of the two. Also, the total volume
+          after the value is opened is the sum of each volume.
+          \\
+          \\
+          $
+            \begin{cases}
+              n_A=0.1 ~ mole
+              \\
+              \\
+              n_B=0.1 ~ mole
+            \end{cases} \Longrightarrow n_{tot}=n_A+n_B=0.1+0.1=0.2 ~ mole
+            \\
+            \\
+            \\
+            \begin{cases}
+              V_A=1 ~ liter=0.001 ~ m^3
+              \\
+              \\
+              V_B=1 ~ liter=0.001 ~ m^3
+            \end{cases} \Longrightarrow V_{tot}=V_A+V_B=0.001+0.001=0.002 ~ m^3
+            \\
+            \\
+            \\
+            PV=nRT, ~~~~~~ P_{tot} V_{tot}=n_{tot} R T_{tot} \Longrightarrow \boxed{\dfrac{P_{tot}}{T_{tot}}=\dfrac{n_{tot}}{V_{tot}} R} ~~~~ (A)
+            \\
+            \\
+          $
+          Mixing of two identical ideal gases with the same temperature and pressure, results in entropy
+          change of zero. (page 80 of the textbook) Therefore, the entropy stays the same for this case. Hence,
+          \\
+          \\
+          $
+            U=n C_V T \Longrightarrow U_{tot}=n_A C_V T_A+n_B C_V T_B
+            \\
+            \\
+            \\
+            U_{tot}=C_V \bigg( n_A T_A+n_B T_B\bigg)=n_{tot} C_V T_{tot}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              T_{tot}=\dfrac{n_A T_A+n_B T_B}{n_A+n_B}
+            }
+            \\
+            \\
+            \\
+            \text{From (A) we can conclude that } \therefore ~~~ \boxed{
+              P_{tot}=T_{tot} \dfrac{n_{tot}}{V_{tot}} R
+            }
+            \\
+            \\
+            \\
+            \begin{cases}
+              T_A=20^{\circ} C=293.15 ~ K
+              \\
+              \\
+              T_B=100^{\circ} C=373.15 ~ K
+            \end{cases} \Longrightarrow
+            T_{tot}=\dfrac{(0.1)(293.15)+(0.1)(373.15)}{0.1+0.1}=333.15 ~ K
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \text{The equilibrium temperature}=60^{\circ} C
+            }
+            \\
+          $
+        }
+
       \item (5 points) What is the equilibrium pressure (in Pa)?
+
+        \textcolor{hwColor}{
+          \\
+          We use the formula we found in part (a) to calculate the equilibrium pressure.
+          \\
+          \\
+          $
+            P_{tot}=T_{tot} \dfrac{n_{tot}}{V_{tot}} R
+            =\bigg( 333.15 ~ K \bigg) \bigg( \dfrac{0.2 ~ mol}{0.002 ~ m^3} \bigg) \bigg( 8.314 ~ J/mol.K \bigg)
+            =	276980.91 ~ J/m^3
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \text{The equilibrium pressure} \approxeq 276.98 \times 10^3 ~ Pa
+            }
+            \\
+          $
+        }
 
 
       \item (5 points) The equilibrated gas in B is now pushed by a piston quasistatically into A until chamber B
       is empty. The volume of container A remains constant. What is the final temperature (in ${}^\circ C$)?
 
+        \textcolor{hwColor}{
+          \\
+          For this case, we can think of the two containers as one container that we are compressing 
+          its volume to half of it. My reason to assume this case is that the two containers 
+          are connected and are in equilibrium.
+          \\
+          From page $26$ of the textbook we know that $T_1 V^{\gamma-1}_1=T_2 V^{\gamma-1}_2$. Air is a diatomic 
+          gas so $\gamma=\dfrac{7}{5}$.
+          \\
+          \\
+          $
+            \dfrac{T_1}{T_2}=\dfrac{V^{\gamma-1}_2}{V^{\gamma-1}_1}
+            =\dfrac{(\dfrac{1}{2} V_1)^{\gamma-1}}{V^{\gamma-1}_1}
+            =\bigg( \dfrac{1}{2} \bigg)^{(7/5)-1} \dfrac{V^{\gamma-1}_1}{V^{\gamma-1}_1}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              T_2=\dfrac{T_1}{\bigg( \dfrac{1}{2} \bigg)^{2/5}}
+            }
+            \\
+            \\
+            \\
+            T_1=\dfrac{60^{\circ} C}{\bigg( \dfrac{1}{2} \bigg)^{2/5}}
+            \Longrightarrow
+            \text{The final temperature}=79.1704^{\circ} C
+            \\
+          $
+        }
+
 
       \item (5 points) What is the final pressure (in Pa)?
 
+        \textcolor{hwColor}{
+          \\
+          $
+            PV=nRT \Longrightarrow 
+            P=\dfrac{nRT}{V}
+            =\dfrac{(0.2 ~ mol)(8.314 ~ J/mol.K)(352.3204 ~ K)}{0.001 ~ m^3}
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              P=585.83 \times 10^3 ~ Pa
+            }
+            \\
+          $
+        }
 
-      \item (10 points) What is the overall change in entropy, ∆S, of the AB system (in J/K, from the
+      \pagebreak
+
+      \item (10 points) What is the overall change in entropy, $\Delta S$, of the AB system (in J/K, from the
       start of the problem to the end)?
+
+        \textcolor{hwColor}{
+          \\
+          $
+            \text{Initial:} \begin{cases}
+              n_A=0.1 ~ mole
+              \\
+              n_B=0.1 ~ mole
+              \\
+              T_A=20^{\circ} C
+              \\
+              T_B=100^{\circ} C
+              \\
+              V_A=0.001 ~ m^3
+              \\
+              V_B=0.001 ~ m^3
+            \end{cases},
+            ~~~~ \text{First phase:} \begin{cases}
+              T=60^{\circ} C
+              \\
+              P=276.98 \times 10^3 ~ Pa
+              \\
+              V=0.002 ~ m^3
+            \end{cases},
+            ~~~~ \text{Second phase:} \begin{cases}
+              T=79.1704^{\circ} C
+              \\
+              P=585.83 \times 10^3 ~ Pa
+              \\
+              V=0.001 ~ m^3
+            \end{cases}
+            \\
+            \\
+            \\
+            \Delta S=\Delta S_1+\Delta S_2+\Delta S_3
+            \\
+            \\
+            \begin{cases}
+              \Delta S_1=n_A R \ln \bigg( \dfrac{0.002}{0.001} \bigg)
+              \\
+              \\
+              \Delta S_2=n_B R \ln \bigg( \dfrac{0.002}{0.001} \bigg)
+              \\
+              \\
+              \Delta S_3=n_{tot} R \ln \bigg( \dfrac{0.001}{0.002} \bigg)
+            \end{cases}
+            \Longrightarrow 
+            \Delta S=n_A R \ln \bigg( \dfrac{0.002}{0.001} \bigg)
+            +n_B R \ln \bigg( \dfrac{0.002}{0.001} \bigg)
+            +n_{tot} R \ln \bigg( \dfrac{0.001}{0.002} \bigg)
+            \\
+            \\
+            \\
+            \therefore ~~~ \boxed{
+              \Delta S=0
+            }
+          $
+        }
     \end{enumerate}
 
     \pagebreak
     
     \item The plot shows the measured molar specific heat, $C_p$, of methane gas, $CH_4$, at constant pressure.
     \begin{center}
-      \includegraphics[height=9cm, width=13cm]{question4.JPG}
+      \includegraphics[height=7cm, width=10cm]{question4.JPG}
     \end{center}
     \begin{enumerate}
       \item (5 points) How many translational degrees of freedom does methane have?
@@ -251,12 +447,13 @@
 
     \end{enumerate}
 
+    \pagebreak
 
     \item (15 points) Use the tables at the back of the Schroeder textbook to determine the chemical
     potential of methane molecules in the pure gaseous state at $298 ~ K$ and $1$ bar pressure. Give
     your answer in $eV$.
 
-
+    \pagebreak
 
     \item The figure shows a $PV$ diagram for a cyclic process using a diatomic gas as the medium. At
     point A, the gas is at $300 ~ K$. The arrows indicate the direction of the process.
@@ -282,6 +479,7 @@
 
     \end{enumerate}
 
+    \pagebreak
 
     \item A liquid-methanol ($CH_3 OH$) fuel cell uses the spontaneous redox reaction
     $$
@@ -318,6 +516,8 @@
 
     \end{enumerate}
 
+    \pagebreak
+
     \item Calcium carbonate, $CaCO_3$, has two common crystalline forms, calcite and aragonite. Thermodynamic 
     data can be found at the back of the Schroeder textbook.
     \begin{enumerate}
@@ -328,9 +528,12 @@
 
     \end{enumerate}
 
+    \pagebreak
+
     \item (20 points) A saline solution has $15 ~ g$ of $NaCl$ dissolved in $1 ~ kg$ of pure water at $300 ~ K$. Estimate
     the osmotic pressure (in bar) between the saltwater and pure water.
 
+    \pagebreak
 
     \item Each atom, in a chunk of the fictitious element "metallium", contributes one conduction electron. 
     The density of metallium is $10000 ~ kg/m^3$ and its atomic weight is $100$. Determine, for
