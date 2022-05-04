@@ -525,21 +525,136 @@
     \begin{enumerate}
       \item (5 points) How many moles of gas are there?
 
+        \textcolor{hwColor}{
+          \\
+          We can use the ideal gas law:
+          \\
+          \\
+          $
+            PV=nRT \Longrightarrow n=\dfrac{PV}{RT}
+            \\
+            \\
+            \\
+            n=\dfrac{(1 ~ bar) (1 ~ m^3)}{(8.314 ~ J/mol.K)(300 ~ K)}
+            =\dfrac{(10^5 ~ Nm^{-2}) (1 ~ m^3)}{(8.314 ~ J/mol.K)(300 ~ K)}
+            \\
+            \\
+            \\
+            \therefore ~~~ n \approxeq 40 ~ moles
+          $
+          \\
+        }
+
       \item (5 points) What is the change in energy, $U$, of the gas after $N$ complete cycles (in joules)?
   
+        \textcolor{hwColor}{
+          \\
+          After a complete $N$ cycles, the change in energy is zero. With the help of 
+          the \textbf{Equipartition theorem} we have:
+          \\
+          \\
+          $
+            \text{For a diatomic gas } \gamma=\dfrac{7}{5}=\dfrac{f+2}{f} \Longrightarrow f=5
+            \\
+            \\
+            U=\dfrac{1}{2} Nf kT=\dfrac{5}{2} N kT=\dfrac{5}{2} PV
+            \\
+            \\
+            \\
+            \therefore ~~~ \Delta U=\dfrac{5}{2} \bigg(P_2 V_2-P_1 V_1 \bigg)
+            \\
+            \\
+            \\
+            \begin{cases}
+              \Delta U_{AB}=\dfrac{5}{2} V_1 \bigg( P_2-P_1 \bigg)
+              \\
+              \\
+              \Delta U_{BC}=\dfrac{5}{2} P_2 \bigg(V_2-V_1 \bigg)
+              \\
+              \\
+              \Delta U_{CD}=-\dfrac{5}{2} V_2 \bigg(P_2 -P_1 \bigg)
+              \\
+              \\
+              \Delta U_{DA}=-\dfrac{5}{2} P_1 \bigg(V_2-V_1 \bigg)
+            \end{cases}
+            \\
+            \\
+            \\ 
+            \Delta U=\Delta U_{AB}+\Delta U_{BC}+\Delta U_{CD}+\Delta U_{DA}
+            =\dfrac{5}{2} V_1 \bigg( P_2-P_1 \bigg)
+            +\dfrac{5}{2} P_2 \bigg(V_2-V_1 \bigg)
+            -\dfrac{5}{2} V_2 \bigg(P_2 -P_1 \bigg)
+            -\dfrac{5}{2} P_1 \bigg(V_2-V_1 \bigg)
+            \\
+            \\
+            \\
+            \therefore ~~~ \Delta U=0
+            \\
+          $
+        }
+
       \item (5 points) What is the work done by the gas after each cycle (in joules)?
   
+        \textcolor{hwColor}{
+          \\
+          $
+            \begin{cases}
+                W=-P ~ \Delta V
+                \\
+                \\
+                Q=\Delta U-W
+              \end{cases}
+            $
+            \\
+            \\
+            The work done for a gas is positive when volume is decreasing and it is negative when volume is increasing.
+            \\
+            \\
+            $
+              \begin{cases}
+                W_{AB}=0
+                \\
+                \\
+                W_{BC}=-P_2 \bigg( V_2-V_1 \bigg)
+                \\
+                \\
+                W_{CD}=0
+                \\
+                \\
+                W_{DA}=-P_1 \bigg( V_1-V_2 \bigg)
+              \end{cases}
+              \\
+              \\
+              \\
+              W=W_{AB}+W_{BC}+W_{CD}+W_{DA}
+              =0
+              -P_2 \bigg( V_2-V_1 \bigg)
+              +0
+              -P_1 \bigg( V_1-V_2 \bigg)
+              \\
+              \\
+              \\
+              W=-(4 \times 10^5 ~ Nm^{-2}) (3-1 ~ m^3)-(1 \times 10^5 ~ Nm^{-2})(1-3 ~ m^3)
+              \\
+              \\
+              \\
+              \therefore ~~~ W=-6 \times 10^5 ~ J
+              \\
+            $
+        }
+
       \item (5 points) What is the entropy change of the gas after each cycle (in $J/K$)?
   
       \item (5 points) If this were a heat engine, what would be the maximum efficiency of the process?
       (Give your answer as a percentage). You may assume that $c_v$ and $c_p$ remain constant over
       the cycle.
-  
+
       \item (5 points) What would be the maximum efficiency of the process if this were a Carnot cycle
       operating between the two extreme temperatures (give your answer as a percentage)?
 
-
     \end{enumerate}
+
+    HERE PICTURE
 
     \pagebreak
 
